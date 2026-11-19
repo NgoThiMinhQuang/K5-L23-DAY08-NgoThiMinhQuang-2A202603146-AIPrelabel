@@ -54,7 +54,7 @@ python scripts/review_stats.py --pre submission/prelabel/pre_traps.coco.json --f
 
 Sau khi export nhãn đã review, tôi đối chiếu đáp án bẫy và sửa lại trên CVAT. Kết quả hiện tại đạt **12/12 = 100% ở vòng sửa có hỗ trợ đối chiếu đáp án**. Tôi lưu riêng export và thống kê từng vòng tại qc/part4_round1/ và qc/part4_round2/ để theo dõi thay đổi.
 
-Tôi dành **120 phút để review 24 ảnh**, trung bình **5 phút/ảnh**. Tôi không đo thời gian gán Gold nên để trống thời lượng của bước này trong time_log.csv. Do thiếu số liệu gán tay, tôi chưa tính được mức tiết kiệm thời gian khi sử dụng pre-label.
+Tôi dành **15 phút để gán 4 ảnh Gold**, trung bình **3,75 phút/ảnh**, và **120 phút để review 24 ảnh batch**, trung bình **5 phút/ảnh**. Thời lượng Gold được tôi cung cấp bổ sung sau khi hoàn thành, không có log bấm giờ để đối chiếu; nguồn này được ghi trong time_log.csv.
 
 ## 3. AI error profile và so với Gold
 
@@ -93,7 +93,7 @@ Qua kết quả này, tôi nhận thấy cần đánh giá riêng khả năng ph
 
 Trong lượt review tiếp theo, tôi áp dụng ba quy tắc từ CAL-03: (1) đối chiếu lớp của từng xe máy với ảnh gốc; (2) kiểm người và phương tiện thành các đối tượng riêng; (3) rà khung trùng trên cùng cá thể, kể cả khi dự đoán có confidence cao.
 
-Tốc độ review trung bình của tôi là 5 phút/ảnh. Do không đo thời gian Gold, tôi chưa có cơ sở định lượng mức tăng tốc so với gán tay. Bộ kiểm tra chỉ có 12 bẫy, với khoảng tin cậy 95% của kết quả hiện tại khoảng 76–100%; kết quả vòng sửa cũng chịu ảnh hưởng của việc đã đối chiếu đáp án.
+Theo thời lượng tôi cung cấp, review batch mất 5 phút/ảnh, cao hơn mức 3,75 phút/ảnh của Gold khoảng 33,3%. Kết quả này chưa cho thấy tiết kiệm thời gian trong bài thực nghiệm. Hai tập có số ảnh và độ phức tạp khác nhau, thời gian Gold được cung cấp sau khi hoàn thành, nên đây chỉ là so sánh mô tả, chưa tách được ảnh hưởng của pre-label. Bộ kiểm tra chỉ có 12 bẫy, với khoảng tin cậy 95% của kết quả hiện tại khoảng 76–100%; kết quả vòng sửa cũng chịu ảnh hưởng của việc đã đối chiếu đáp án.
 
 ## 5. Mask SAM 2.1 (Part 5)
 
@@ -151,7 +151,7 @@ Bộ dữ liệu hợp lệ về cấu trúc và còn 15 cảnh báo hình học
 
 ## 8. Ghi chú cá nhân và môi trường thực nghiệm
 
-Tôi gán nhãn Gold thủ công trước khi chạy model, trực tiếp review batch trên CVAT và tự chọn các điểm positive/negative cho SAM. Tôi không đo thời gian Gold nên không có số liệu để so sánh tốc độ gán tay với review có pre-label. Đây là một hạn chế của phần đánh giá hiệu quả thời gian.
+Tôi gán nhãn Gold thủ công trước khi chạy model, trực tiếp review batch trên CVAT và tự chọn các điểm positive/negative cho SAM. Tôi bổ sung thời lượng Gold là 15 phút sau khi hoàn thành bài. Do không có bản ghi bấm giờ tại thời điểm làm, tôi ghi rõ đây là thời lượng tự báo cáo và xem đó là một hạn chế của phần đánh giá thời gian.
 
 Tôi thực hiện các thí nghiệm trên CPU với Python 3.12.10. Phiên bản thư viện được lưu trong evidence/check_env_original.txt. CVAT trên máy là 2.74.1, khác phiên bản 2.81 được dùng trong tài liệu hướng dẫn.
 

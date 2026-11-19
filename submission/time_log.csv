@@ -1,3 +1,3 @@
 step,images,minutes,note
-gold_manual,4,,Học viên xác nhận trong chat19/11/2026: không đo thời gian Gold. Không ghi số0/ước lượng; không tính phút/ảnh hoặc mức tiết kiệm.
+gold_manual,4,15,"Học viên cung cấp bổ sung trong chat: tổng thời gian gán4ảnhGold là15phút. Đây là thời lượng tự báo cáo sau khi hoàn thành, không có log bấm giờ để đối chiếu."
 batch_review,24,120,Người thực hiện xác nhận trong chat ngày 19/11/2026: dành 2 tiếng review 24 ảnh; 120/24 = 5 phút/ảnh. Không suy ra từ giờ bắt đầu 10:00.

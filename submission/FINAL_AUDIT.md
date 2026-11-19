@@ -5,7 +5,7 @@ Ngày19/11/2026. Đây là kiểm kê bằng chứng, không phải điểm gi�
 | Part | Yêu cầu rubric | Trạng thái | Bằng chứng | File đã hoàn thiện | Việc còn cần học viên thực hiện |
 |---|---|---|---|---|---|
 | 0 | Cài đặt/tái lập/Git (một phần hạng mục8đ) | Kỹ thuật có bằng chứng; Git/nộp chưa chốt | Environment exit0; public repo đã xác minh; L2/CVAT2.74.1 | README.md; STUDENT.md; evidence/check_env_original.txt | Kiểm tên repo và lịch sử commit theo yêu cầu lớp; duyệt trước push |
-| 1 | Gold thủ công và contract10đ | Nhãn hợp lệ; học viên xác nhận không đo thời gianGold | 4 ảnh/51annotation; xác nhận học viên gán trước AI; Gold giữ nguyên | labels/gold_manual.json; time_log.csv; REPORT mục2/8 | Không có thời lượng để bổ sung; khai thiếu trung thực, không tự tạo. |
+| 1 | Gold thủ công và contract10đ | Nhãn hợp lệ; có thời lượng tự báo cáo15phút | 4ảnh/51annotation; time_log15phút do học viên cung cấp sau khi hoàn thành, không có log bấm giờ | labels/gold_manual.json; time_log.csv; REPORT mục2/8 | Giữ đúng nguồn tự báo cáo; không coi là bằng chứng đã bấm giờ tại thời điểm làm. |
 | 2 | Tour >=4runs, >=3model, SAM; recipe20đ | Đủ log/đầu ra; phần nhận xét cần học viên chịu trách nhiệm | 6runs r01–r06 khớp log gốc, gồm SAM2.1 | model_log.csv; evidence/model_runs_original.csv; evidence/runs/; REPORT mục1 | Đọc lại nhận xét/recipe và bổ sung ý kiến cá nhân nếu cần |
 | 3 | Ngưỡng theo lớp8đ | Đủ sản phẩm kỹ thuật | threshold_sweep.csv/md/png; motorbike0.10, three_wheeler0.15 | qc/threshold_sweep.*; REPORT mục1 | Xác nhận hiểu giới hạn4ảnhGold và chọn/chấm cùng mẫu |
 | 4 | Review, bẫy, AI error profile28đ | Đủ sản phẩm vòng sửa; không biến thành phép đo độc lập | 24ảnh/586annotation;120phút;12/12bẫy vòng sửa có hỗ trợ | labels/batch_reviewed.json; qc/review_stats.*; qc/part4_round*/; REPORT mục2–4 | Không có thao tác kỹ thuật cần chạy lại; giữ nguồn gốc kết quả |
@@ -17,7 +17,7 @@ Ngày19/11/2026. Đây là kiểm kê bằng chứng, không phải điểm gi�
 
 Validation hợp lệ. Calibration đã đủ3dòng cóloi_may/cau_hoi_mo/bay_lot, guidelinev1.1 và taxonomyversionđã đồng bộ; ruleskhông đổi. Releasecandidate24ảnh/586annotation cógeometry/lớp/IDkhôngđổi, manifestv1.1khớp. ScriptQC --guideline-gap0 gợiýREWORK do ảnhlỗi20%>2%; học viên chấp nhận đề xuất, chưaphêduyệtRelease.
 
-check_submission.py còn1lỗi: thiếu thời lượngGold. Học viên xác nhận **không đo**; ôminutesđểtrốngvànhậnghiđúngnguồn. Không bỏqua/chỉnhvalidator hoặc điền0/ước lượng để đạt.
+Học viên bổ sung thời lượngGold15phút/4ảnh=3,75phút/ảnh. Đã cập nhật time_log với nguồn tự báo cáo sau khi hoàn thành, không có log bấm giờ. Kiểm tra cấu trúc có thể đủ dữ liệu nhưng không chứng minh yêu cầu bấm giờ tại thời điểm thực hiện đã được đáp ứng.
 
 ## Việc còn lại
 
@@ -32,4 +32,4 @@ Repo đã được xác minhpublic. TênrepođặtHoTentrướcMSHV, khác mẫu
 .\.venv\Scripts\python.exe scripts/qc_sample.py --n 5 --seed 42
 ```
 
-Sao lưu phiếuQCtrướckhidùng--force. Chỉ khi đã kiểm lại thật mới cập nhậtphiếuQCvàchạyqc_report.py --guideline-gap0. Cuối cùngcheck_submission.py; vẫn cần khai giới hạnGoldkhôngđo.
+Sao lưu phiếuQCtrướckhidùng--force. Chỉ khi đã kiểm lại thật mới cập nhậtphiếuQCvàchạyqc_report.py --guideline-gap0. Cuối cùngcheck_submission.py; giữ ghi chú nguồn thời lượngGold tự báo cáo.

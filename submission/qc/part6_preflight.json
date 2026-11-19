@@ -8,8 +8,8 @@
     },
     {
       "part": 1,
-      "status": "Gold đã có và được xác nhận trình tự; còn thiếu thời gian Gold thật",
-      "evidence": "4 ảnh/51 annotation; validation trước đó exit 0; time_log gold_manual còn trống."
+      "status": "Gold hợp lệ, thời lượng tự báo cáo15phút",
+      "evidence": "4ảnh/51annotation; time_log15phút được bổ sung sau khi làm, không cólogbấmgiờ."
     },
     {
       "part": 2,
@@ -235,13 +235,13 @@
   "protected_inputs_unchanged": true,
   "latest_audit": "submission/FINAL_AUDIT.md",
   "latest_decision": "Rework",
-  "gold_duration_status": "not_measured_confirmed_by_user",
+  "gold_duration_status": "User-reported after completion; no contemporaneous timing log",
   "pending": [
     "Actual rework if pursuing Release",
     "Review personal/mask observations",
     "Repository naming convention"
   ],
-  "formal_submission_requirement_missing": [
-    "Measured gold_manual duration, explicitly unavailable"
-  ]
+  "formal_submission_requirement_missing": [],
+  "gold_manual_minutes": 15,
+  "rubric_timing_evidence_limitation": "Duration was supplied after completion, not supported by a stopwatch log"
 }

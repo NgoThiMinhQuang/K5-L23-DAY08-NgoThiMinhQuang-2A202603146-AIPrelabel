@@ -72,3 +72,7 @@ Bảng đối chiếu rubric mới nhất: submission/FINAL_AUDIT.md. Các ghi c
 - Quyết địnhReworkđãchốt vì1/5ảnhQCcólỗi=20%>2%; bộ24ảnh/586annotationvẫnlàcandidate, chưaRelease.
 - Họcviênxácnhận khôngđothờigianGold;time_logđểtrốngminutesvàghirõ. Validatorcòn1yêucầuthiếunày,khôngbịađểvượt.
 - CP6đủhồsơcalibration/QC/quyếtđịnhRework; việcsửanhãn/masknếumuốnReleasechưathựchiện. Trạngtháimớinhấtxemsubmission/FINAL_AUDIT.md.
+
+## Bổ sung thời lượngGold theo thông tin mới
+
+Học viên cung cấp tổng15phút cho4ảnhGold, trung bình3,75phút/ảnh. time_logđã cập nhật nguồn tự báo cáo sau khi hoàn thành, không cólogbấmgiờ. Các ghi chú thiếu thời gian phía trên là lịch sử trước lần bổ sung này; không đổi nhãnGold hoặc kết quả thí nghiệm.

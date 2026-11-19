@@ -23,4 +23,4 @@ Nếu muốn tạo lại phiếuQC, sao lưu phiếu và ảnh hiện tại trư
 
 ## 4. Hồ sơ và giới hạn
 
-Có thể báo cáoRework trung thực theo rubric; không bắt buộc bịaRelease. Học viên đã xác nhận không đo thời gianGold nên không có cách điền số thật cho yêu cầu đó; giữ ôminutestrống, khai giới hạn. Không sửaGold để tạo lại lịch sử hoặc giả thời gian. Chưapush/phát hành cuối.
+Có thể báo cáoRework trung thực theo rubric; không bắt buộc bịaRelease. Học viên cung cấp bổ sung thời lượngGold15phút sau khi hoàn thành; time_log ghi rõ nguồn tự báo cáo và không có log bấm giờ. Không sửaGold để tạo lại lịch sử hoặc giả thời gian. Chưapush/phát hành cuối.

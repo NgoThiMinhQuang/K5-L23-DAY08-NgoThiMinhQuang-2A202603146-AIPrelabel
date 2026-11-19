@@ -1,5 +1,4 @@
-LỖI: time_log.csv thiếu bước: gold_manual
 
-1 lỗi, 0 cảnh báo. Sửa hết LỖI rồi nộp.
+0 lỗi, 0 cảnh báo. Sạch lỗi: có thể nộp.
 
-Exit code: 1
+Exit code: 0

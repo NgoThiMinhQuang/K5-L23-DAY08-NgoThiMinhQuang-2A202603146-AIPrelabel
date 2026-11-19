@@ -10,10 +10,8 @@
       "errors": []
     },
     "submission_check.txt": {
-      "exit_code": 1,
-      "errors": [
-        "LỖI: time_log.csv thiếu bước: gold_manual"
-      ]
+      "exit_code": 0,
+      "errors": []
     }
   },
   "format_files_checked": 37,
@@ -47,8 +45,8 @@
   "public_repository_verified": true,
   "repository_name_matches_default_submission_pattern": false,
   "latest_decision": "Rework",
-  "gold_duration_status": "not_measured_confirmed_by_user",
-  "formal_submission_requirement_missing": [
-    "Measured gold_manual duration, explicitly unavailable"
-  ]
+  "gold_duration_status": "User-reported after completion; no contemporaneous timing log",
+  "formal_submission_requirement_missing": [],
+  "gold_manual_minutes": 15,
+  "rubric_timing_evidence_limitation": "Duration was supplied after completion, not supported by a stopwatch log"
 }

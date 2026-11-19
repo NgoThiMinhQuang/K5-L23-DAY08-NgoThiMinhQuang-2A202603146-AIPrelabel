@@ -2,7 +2,7 @@
   "date": "2026-11-19",
   "class": "L2",
   "batch_review_minutes": 120,
-  "gold_manual_minutes": null,
+  "gold_manual_minutes": 15,
   "qc_confirmation": {
     "reviewer": "NgoThiMinhQuang",
     "source": "User explicitly confirmed all three proposed img_003 errors and the other four QC images clean in this chat",
@@ -47,5 +47,12 @@
   "cvat_version": "2.74.1",
   "cvat_version_source": "GET http://localhost:8080/api/server/about",
   "decision_source": "User accepted technical recommendations with “cái này mình theo ý bạn”; no independent unaided assessment claimed",
-  "gold_duration_status": "User explicitly confirmed Gold time was not measured"
+  "gold_duration_status": "User-reported 15 minutes after completion; no contemporaneous timing log",
+  "gold_duration_history": [
+    {
+      "previous_status": "User explicitly confirmed Gold time was not measured",
+      "previous_minutes": null,
+      "update": "User later supplied 15 minutes for the four Gold images; self-reported after completion, not stopwatch-verified"
+    }
+  ]
 }
