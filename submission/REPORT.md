@@ -1,6 +1,6 @@
 # Báo cáo Day 08 — 2A202603146 - Ngo Thi Minh Quang
 
-> Bản chuẩn bị nộp ngày 19/11/2026. Học viên lớp L2; Windows, chạy model trên CPU; CVAT Docker 2.74.1 (xác minh qua /api/server/about). Phần số liệu đã đối chiếu log; còn một quyết định calibration, thời gian Gold và quyết định cuối cùng cần học viên xác nhận. Không coi đây là Release đã phê duyệt.
+> Bản chuẩn bị nộp ngày 19/11/2026. Học viên lớp L2; Windows, chạy model trên CPU; CVAT Docker 2.74.1 (xác minh qua /api/server/about). Phần số liệu đã đối chiếu log; đã chốt ba ca calibration và Rework theo xác nhận/ủy quyền học viên. Học viên xác nhận không đo thời gian Gold, nên không đáp ứng được yêu cầu thời lượng thật của rubric. Không coi đây là Release đã phê duyệt.
 
 ## 1. Model và recipe (Part 2–3)
 
@@ -54,7 +54,7 @@ python scripts/review_stats.py --pre submission/prelabel/pre_traps.coco.json --f
 
 Chỉ mở key sau khi có export đã xác nhận. Bản export, review_stats và nguồn gốc từng vòng giữ nguyên tại qc/part4_round1/ và qc/part4_round2/. Kết quả hiện tại **12/12=100% ở vòng sửa có hỗ trợ đối chiếu đáp án**; không mô tả đây là phép đo review độc lập mới.
 
-Thời gian do học viên xác nhận: batch_review **120 phút/24 ảnh=5 phút/ảnh**. Thời gian Gold chưa được cung cấp, để trống minutes và ghi rõ thiếu; không suy ra từ 10:00, timestamp, hoặc thời gian chạy model. Chưa đủ số liệu để tính phần trăm tiết kiệm so với gán tay.
+Thời gian do học viên xác nhận: batch_review **120 phút/24 ảnh=5 phút/ảnh**. Học viên xác nhận không đo thời gian Gold; để trống minutes và ghi rõ không đo; không suy ra từ 10:00, timestamp, hoặc thời gian chạy model. Chưa đủ số liệu để tính phần trăm tiết kiệm so với gán tay.
 
 ## 3. AI error profile và so với Gold
 
@@ -93,7 +93,7 @@ Chưa có nguồn để kết luận cá nhân đã bỏ bước nào do mệt/n
 
 Các thao tác phòng lỗi đã chốt qua CAL-03, áp dụng cho lượt tiếp: (1) kiểm lớp từng xe máy thay vì tin nhãn bicycle; (2) kiểm mỗi người và xe thành hai đối tượng riêng; (3) rà khung trùng cùng cá thể, không miễn kiểm do conf cao. Không tự ghi rằng các thao tác này đã được thực hiện đầy đủ trên mọi ảnh của vòng trước.
 
-Tốc độ hiện có5 phút/ảnh; thiếu thời gian Gold nên chưa kết luận được tiết kiệm thời gian. Mẫu12 bẫy nhỏ; KTC95% của kết quả hiện tại khoảng76–100%, và việc đã biết đáp án làm kết quả vòng sửa không độc lập.
+Tốc độ hiện có5 phút/ảnh; Gold không được đo thời gian nên chưa kết luận được tiết kiệm thời gian. Mẫu12 bẫy nhỏ; KTC95% của kết quả hiện tại khoảng76–100%, và việc đã biết đáp án làm kết quả vòng sửa không độc lập.
 
 ## 5. Mask SAM 2.1 (Part 5)
 
@@ -116,10 +116,10 @@ Nội dung học viên còn cần xác nhận cụ thể: mask từng ảnh có 
 | Ca | Nguồn | Trạng thái | Nội dung |
 |---|---|---|---|
 | CAL-01 | loi_may | Học viên đã chốt | Tuk-tuk/ba gác/xích lô là three_wheeler, một xe gồm mái/thùng cố định; người riêng. Không đổi định nghĩa để hợp thức hóa car. |
-| CAL-02 | cau_hoi_mo | Chờ xác nhận | Đề xuất mask gồm hàng nằm trong giỏ/thùng cố định, loại phần nhô ra và người; box giữ v1.0. Dựa trên điểm dương học viên chọn ở vùng hàng img_003. |
+| CAL-02 | cau_hoi_mo | Chấp nhận B theo đề xuất kỹ thuật | Mask gồm hàng nằm trong giỏ/thùng cố định, loại phần hàng nhô ra và người; box giữ v1.0. Nguồn: học viên chấp nhận làm theo đề xuất trong chat. |
 | CAL-03 | bay_lot | Học viên đã chốt | Motorbike cho xe máy hai bánh; kiểm lớp, người/xe, khung trùng theo checklist; conf không thay việc kiểm. |
 
-calibration_decisions.csv có **2 quyết định thật**; candidates.csv/md có3 ca cùng trạng thái xác nhận. guideline_v1.1_calibrated.md chứa hai ví dụ/checklist đã chốt và đánh dấu rõ CAL-02 còn mở. Chưa đủ yêu cầu>=3 quyết định và ít nhất một cau_hoi_mo đã chốt. Không tự gắn phê duyệt cho lời đề xuất.
+calibration_decisions.csv hiện có **3 quyết định đã chốt**, gồm loi_may, cau_hoi_mo và bay_lot. CAL-02 được học viên chấp nhận theo đề xuất kỹ thuật, không mô tả là quyết định độc lập không có AI. Quy tắc B đã vào guideline_v1.1_calibrated.md; taxonomy.version cập nhật v1.1, taxonomy.rules giữ nguyên. Việc kiểm lại nhãn/mask theo quy tắc mới thuộc kế hoạch Rework, chưa tự ghi đã sửa xong.
 
 CAL-01/CAL-03 chủ yếu là lỗi áp dụng quy tắc đã rõ, không đổi lớp/taxonomy; CAL-02 mới là ranh giới guideline cần làm rõ. Không đổi taxonomy.rules. Hình minh họa dẫn img_003/img_004/img_013/img_031. Nếu quy tắc mới đổi nhãn, học viên sửa trên CVAT và export qc_fixed.json; không sửa Gold hoặc bộ bẫy.
 
@@ -137,25 +137,25 @@ Mẫu seed42 gồm **5/24 ảnh**, 0 ca can_review+5 ngẫu nhiên: img_003, img
 
 ID trên là ID ảnh preview/release hiện tại, không bảo đảm trùng ID sidebar CVAT.
 
-**Lỗi theo đối tượng:3/110=2.7%. Lỗi theo ảnh:1/5=20.0%.** Mỗi loại lỗi có1 trường hợp; không đủ căn cứ gọi là lỗi hệ thống. Báo cáo tự động: qc/qc_report_auto.md, chạy với --guideline-gap1 vì CAL-02 còn mở. Gợi ý script hiện tại: **HOLD**. Khi guideline được chốt, tỷ lệ20% vẫn vượt ngưỡng2%, cần cân nhắc **Rework** trước khi Release; đây không phải quyết định học viên đã đưa ra.
+**Lỗi theo đối tượng:3/110=2.7%. Lỗi theo ảnh:1/5=20.0%.** Mỗi loại lỗi có1 trường hợp; không đủ căn cứ gọi là lỗi hệ thống. Báo cáo tự động: qc/qc_report_auto.md, chạy với --guideline-gap0 sau khi CAL-02 được chốt. Gợi ý script hiện tại: **REWORK**, do tỷ lệ ảnh lỗi20% vượt ngưỡng2%. Học viên đồng ý làm theo đề xuất kỹ thuật; quyết định báo cáo là **Rework**. Không coi đã sửa lỗi hoặc đã Release.
 
 Người QC cũng là người review, không độc lập. Mẫu5 ảnh nhỏ; cận trên95% Wilson cho tỷ lệ ảnh lỗi thật khoảng**62%**. Không khẳng định đạt2% chỉ từ5 ảnh; bẫy100% không thay QC.
 
 ### Release candidate
 
-Có release/final_det.coco.json, release_summary.csv, release_manifest.json: đúng24 ảnh batch, **586 annotation=585 vật+1 ignore_region**. Đếm lớp: person282, motorbike209, car53, three_wheeler24, bicycle9, truck5, bus3, ignore_region1. Manifest, summary và nhãn nhất quán với export vònghai; chưa có qc_fixed.json. Giữ taxonomy versionv1.0 trong release cho tới khi guidelinev1.1 được chốt và áp dụng; không tự đổi version để che phần còn mở.
+Có release/final_det.coco.json, release_summary.csv, release_manifest.json: đúng24 ảnh batch, **586 annotation=585 vật+1 ignore_region**. Đếm lớp: person282, motorbike209, car53, three_wheeler24, bicycle9, truck5, bus3, ignore_region1. Manifest, summary và nhãn nhất quán với export vònghai; chưa có qc_fixed.json. Release candidate đã đồng bộ taxonomy versionv1.1 sau khi chốt guideline. Đã kiểm annotations và ID không đổi sau build lại; không tự thay geometry/lớp của dữ liệu nguồn. Việc đáp ứng chất lượng guideline vẫn cần Rework.
 
 Validation hợp lệ về cấu trúc;15 cảnh báo hình học cần đối chiếu guideline. Tồn tại thư mục release chỉ chứng minh đã xây bộ ứng viên, không chứng minh đã Release. Không thay nhãn nguồn để xóa ba lỗi đã xác nhận.
 
-**Quyết định cuối của học viên: chưa có.** Chờ CAL-02, lựa chọn Hold/Rework/Release cùng lý do; nếu sửa QC thì xuất qc_fixed.json và build lại bộ ứng viên. Chưa push hoặc phát hành cuối cùng.
+**Quyết định: Rework, ngày19/11/2026**, theo đề xuất kỹ thuật được học viên chấp nhận. Lý do:3lỗi đã xác nhận ở1/5ảnh=20%, vượt2%; còn phải kiểm tính nhất quán mask với CAL-02. Kế hoạch cụ thể ở qc/rework_plan.md. Nếu sửa QC, học viên thực hiện trên CVAT, export qc_fixed.json rồi build lại. Chưa push, chưa phê duyệt Release cuối.
 
 ## 8. Ghi chú cá nhân, tái lập và trung thực
 
 - Học viên xác nhận tự gán Gold trước khi xem AI; không sửa Gold trong các lần trợ giúp. Đây là xác nhận học viên, không phải suy luận từ validation.
-- Học viên xác nhận thời gian batch120 phút; chưa có thời gian Gold, không ước lượng hoặc điền0. Chưa tính được so sánh tốc độ gán tay/review.
+- Học viên xác nhận thời gian batch120 phút; học viên xác nhận không đo thời gian Gold, không ước lượng hoặc điền0. Chưa tính được so sánh tốc độ gán tay/review.
 - Model CPU, Python3.12.10; phiên bản thư viện trong evidence/check_env_original.txt. CVAT2.74.1 thực tế khác bản2.81 hướng dẫn; ghi rõ để tái lập.
 - Có log r01–r06 và đầu ra thực nghiệm; không dùng cache để thay các lần chạy này. Lần chuẩn bị nộp chỉ đọc log gốc, kiểm cấu trúc, chạy QC/report; không rerun model/threshold/review_stats/SAM.
-- **AI hỗ trợ:** Codex đọc tài liệu, kiểm schema/đường dẫn/manifest/log, thực thi lệnh với tọa độ học viên, đề xuất nghi vấn QC và ca calibration, trình bày báo cáo theo bằng chứng. Học viên xác nhận3 lỗiQC vàCAL-01/CAL-03. CAL-02, nhận xét mask chi tiết và quyết định cuối còn chờ; không ghi thay là đã xác nhận.
+- **AI hỗ trợ:** Codex đọc tài liệu, kiểm schema/đường dẫn/manifest/log, thực thi lệnh với tọa độ học viên, đề xuất nghi vấn QC và ca calibration, trình bày báo cáo theo bằng chứng. Học viên xác nhận3 lỗiQC vàCAL-01/CAL-03. CAL-02 và quyết định Rework sau đó được học viên chấp nhận theo đề xuất kỹ thuật. Nhận xét mask chi tiết vẫn cần học viên đọc lại; không tự ghi thao tác sửa chưa thực hiện.
 - Các mask demo do Codex tự chọn điểm trước đó không tính vào3mask của học viên. Kết quả bẫy hiện tại là vòng sửa có hỗ trợ; log các vòng được giữ nguyên, không sửa điểm máy.
 - Không sửa thuật toán để đạt điểm; không phát hiện lỗi thực thi bắt buộc sửa code. Các cảnh báo/thành phần chưa đủ vẫn được báo trung thực.
 - Bản báo cáo dài trước khi chuẩn hóa giữ ở evidence/REPORT_history_before_submission_cleanup.md. Những số đo lịch sử là bằng chứng, không phải trạng thái hiện tại.

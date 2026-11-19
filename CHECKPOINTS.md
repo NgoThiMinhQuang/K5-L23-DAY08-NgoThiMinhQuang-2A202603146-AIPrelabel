@@ -65,3 +65,10 @@ Bảng đối chiếu rubric mới nhất: submission/FINAL_AUDIT.md. Các ghi c
 - CP5: có3mask từ điểm học viên, thực hành được học viên xác nhận; nhận xét chi tiết/correspondenceCAL-02còn cần xem.
 - CP6: đã ghiQC5ảnh/110vật theo xác nhận học viên,3lỗi;2quyếtđịnhcalibration đã chốt,CAL-02chờ;scriptgợiýHOLD. Chưa hoàn thành/toànbộRelease.
 - check_submission hiện còn3lỗi dữ kiện người học; không sửa scriptđểbỏqua.
+
+## Cập nhật chốt CAL-02 và Rework
+
+- CAL-02B đã được học viên chấp nhận theo đề xuất kỹ thuật; calibrationđủ3ca, guideline/taxonomyv1.1, rulesgiữnguyên.
+- Quyết địnhReworkđãchốt vì1/5ảnhQCcólỗi=20%>2%; bộ24ảnh/586annotationvẫnlàcandidate, chưaRelease.
+- Họcviênxácnhận khôngđothờigianGold;time_logđểtrốngminutesvàghirõ. Validatorcòn1yêucầuthiếunày,khôngbịađểvượt.
+- CP6đủhồsơcalibration/QC/quyếtđịnhRework; việcsửanhãn/masknếumuốnReleasechưathựchiện. Trạngtháimớinhấtxemsubmission/FINAL_AUDIT.md.

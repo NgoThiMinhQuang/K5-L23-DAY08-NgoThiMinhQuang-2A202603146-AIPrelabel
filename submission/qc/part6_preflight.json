@@ -54,7 +54,8 @@
     "manifest_consistent": true,
     "summary_consistent": true,
     "validation_exit": 0,
-    "is_release_candidate_only": true
+    "is_release_candidate_only": true,
+    "taxonomy_version": "v1.1"
   },
   "qc": {
     "images": 5,
@@ -62,18 +63,16 @@
     "unchecked": [],
     "human_checked": 5,
     "error_rate": null,
-    "final_decision": null,
+    "final_decision": "Rework",
     "confirmed_errors": 3,
     "error_rate_objects": 0.02727272727272727,
     "error_rate_images": 0.2
   },
   "calibration": {
-    "approved_rows": 2,
+    "approved_rows": 3,
     "candidate_count": 3,
-    "guideline_approved": false,
-    "pending": [
-      "CAL-02"
-    ]
+    "guideline_approved": true,
+    "pending": []
   },
   "masks": [
     {
@@ -231,10 +230,18 @@
     "Part5 SAM inference"
   ],
   "blocked_on": [
-    "CAL-02 confirmation",
-    "Measured Gold duration or explicit unavailable disclosure",
-    "Human final Hold/Rework/Release decision"
+    "Actual rework if pursuing Release"
   ],
   "protected_inputs_unchanged": true,
-  "latest_audit": "submission/FINAL_AUDIT.md"
+  "latest_audit": "submission/FINAL_AUDIT.md",
+  "latest_decision": "Rework",
+  "gold_duration_status": "not_measured_confirmed_by_user",
+  "pending": [
+    "Actual rework if pursuing Release",
+    "Review personal/mask observations",
+    "Repository naming convention"
+  ],
+  "formal_submission_requirement_missing": [
+    "Measured gold_manual duration, explicitly unavailable"
+  ]
 }

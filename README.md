@@ -152,4 +152,4 @@ Chi tiết và cách ghi vào `REPORT.md` mục 1: [docs/MODELS.md](docs/MODELS.
 
 Kết quả bẫy hiện tại **12/12=100% ở vòng sửa có hỗ trợ**. Có24 ảnh batch/586 annotation,3mask SAM từ điểm học viên. QC học viên xác nhận1/5 ảnh lỗi và3/110 đối tượng lỗi. Bộ release hiện tại là **ứng viên**, chưa có phê duyệt cuối; không coi số bẫy100% là mọi nhãn đều đúng.
 
-Còn cần: chốt CAL-02, cung cấp thời gian Gold nếu có đo thật, quyết định xử lý QC và Hold/Rework/Release. Không bịa số liệu để vượt kiểm tra. Log gốc và xác nhận nguồn ở submission/evidence/ và submission/qc/human_confirmations.json. Không đưa work/, models/ hoặc thông tin đăng nhập lên GitHub.
+Đã chốt CAL-02B và quyết định Rework theo đề xuất kỹ thuật. Học viên xác nhận không đo thời gianGold; time_log khai đúng và validator vẫn báo thiếu yêu cầu này. Còn việc sửaQC/kiểmmask nếu muốn tiến tớiRelease. Không bịa số liệu để vượt kiểm tra. Log gốc và xác nhận nguồn ở submission/evidence/ và submission/qc/human_confirmations.json. Không đưa work/, models/ hoặc thông tin đăng nhập lên GitHub.

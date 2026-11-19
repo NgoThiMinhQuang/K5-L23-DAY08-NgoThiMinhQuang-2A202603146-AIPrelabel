@@ -39,12 +39,13 @@
   },
   "calibration_confirmed": [
     "CAL-01",
+    "CAL-02",
     "CAL-03"
   ],
-  "final_release_decision": null,
-  "calibration_pending": [
-    "CAL-02"
-  ],
+  "final_release_decision": "Rework",
+  "calibration_pending": [],
   "cvat_version": "2.74.1",
-  "cvat_version_source": "GET http://localhost:8080/api/server/about"
+  "cvat_version_source": "GET http://localhost:8080/api/server/about",
+  "decision_source": "User accepted technical recommendations with “cái này mình theo ý bạn”; no independent unaided assessment claimed",
+  "gold_duration_status": "User explicitly confirmed Gold time was not measured"
 }

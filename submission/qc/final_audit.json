@@ -12,9 +12,7 @@
     "submission_check.txt": {
       "exit_code": 1,
       "errors": [
-        "LỖI: time_log.csv thiếu bước: gold_manual",
-        "LỖI: calibration_decisions.csv: 2 quyết định, cần ≥ 3",
-        "LỖI: calibration_decisions.csv: chưa có ca nào có nguon = cau_hoi_mo"
+        "LỖI: time_log.csv thiếu bước: gold_manual"
       ]
     }
   },
@@ -23,7 +21,8 @@
     "images": 24,
     "annotations": 586,
     "consistent": true,
-    "approved_final": false
+    "approved_final": false,
+    "taxonomy_version": "v1.1"
   },
   "banned_commit_files": [],
   "secret_pattern_paths": [],
@@ -41,10 +40,15 @@
     "data/split.csv": "ce3de07331d3cb5854639ce45f7faea3f27b8ac0e26a0c81c05a094efb17bb9f"
   },
   "pending": [
-    "CAL-02",
-    "gold_manual minutes",
-    "Human final decision"
+    "Actual rework if pursuing Release",
+    "Review personal/mask observations",
+    "Repository naming convention"
   ],
   "public_repository_verified": true,
-  "repository_name_matches_default_submission_pattern": false
+  "repository_name_matches_default_submission_pattern": false,
+  "latest_decision": "Rework",
+  "gold_duration_status": "not_measured_confirmed_by_user",
+  "formal_submission_requirement_missing": [
+    "Measured gold_manual duration, explicitly unavailable"
+  ]
 }

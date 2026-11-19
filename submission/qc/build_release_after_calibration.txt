@@ -1,0 +1,4 @@
+Release candidate: 24 ảnh, 586 đối tượng (person=282, motorbike=209, car=53, three_wheeler=24, bicycle=9, truck=5, bus=3, ignore_region=1)
+-> submission\release/
+
+Exit code: 0

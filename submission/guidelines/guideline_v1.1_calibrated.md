@@ -1,10 +1,12 @@
 # Label contract — Phố châu Á — BỔ SUNG v1.1 — 2A202603146 - Ngo Thi Minh Quang
 
-> Bản bổ sung đang hoàn thiện. Hai ca đã được học viên chốt trong chat ngày 19/11/2026; CAL-02 còn mở. Không thay thế toàn bộ v1.0; không đổi taxonomy.rules. Không tuyên bố đã hoàn tất calibration.
+> Ba ca đã được chốt trong chat ngày 19/11/2026. CAL-02 là phương án B được học viên chấp nhận theo đề xuất kỹ thuật. Chỉ bổ sung v1.0, không đổi taxonomy.rules; dữ liệu còn trong trạng thái Rework, chưa Release.
 
-## 1. Câu hỏi mở chưa chốt
+## 1. Câu hỏi về hàng hóa đã chốt — CAL-02
 
-**CAL-02 — câu hỏi 3 của v1.0, img_003/img_031:** hàng rời trong giỏ/thùng có thuộc mask xe không? Đề xuất kỹ thuật đang chờ: mask gồm hàng nằm trong giỏ/thùng cố định, loại phần hàng nhô ra và người; box giữ nguyên quy tắc 20% của v1.0. Lý do đề xuất: điểm dương (595,385) do học viên chọn tại img_003 nằm trên vùng hàng. Đây là đề xuất, không tự ghi là quyết định đã chốt. Các câu hỏi mở khác trong v1.0 vẫn giữ trạng thái chưa được xử lý nếu chưa có quyết định cụ thể.
+Ảnh ví dụ: img_003, img_031. **Mask xe gồm khung, mái, giỏ/thùng cố định và hàng nằm trong giỏ/thùng; loại người và phần hàng nhô ra ngoài giỏ/thùng.** Box giữ nguyên v1.0: hàng nhô quá khoảng20% chiều dài xe không tính vào box. Người luôn là đối tượng riêng. Quy tắc mask và box có phạm vi khác nhau, không đồng nhất mặt nạ với toàn hình chữ nhật.
+
+Nguồn xác nhận: học viên chấp nhận làm theo đề xuất kỹ thuật trong chat19/11/2026. Điểm dương(595,385) học viên chọn ở img_003 nằm trên vùng hàng, phù hợp định hướng B; đây không thay kiểm tra kết quả thực tế. Cần rà mask và nhãn hiện tại trong lượt Rework; chưa khẳng định đã đạt quy tắc mới. Các câu hỏi mở khác của v1.0 ngoài ba ca này chưa được đánh giá, không tự tuyên bố tất cả đã được giải quyết.
 
 ## 2. Ca khó và cách áp dụng đã xác nhận
 
@@ -20,4 +22,4 @@
 | Phiên bản | Thay đổi | Nguồn xác nhận |
 |---|---|---|
 | v1.0 | Bản giảng viên, giữ nguyên | guideline/guideline_v1.0_label_contract.md |
-| v1.1 đang hoàn thiện | Hai ví dụ và checklist CAL-01/CAL-03 đã chốt; CAL-02 còn chờ | Xác nhận trực tiếp của học viên trong chat 19/11/2026; qc/calibration_decisions.csv |
+| v1.1 | CAL-01/CAL-03: ví dụ và checklist; CAL-02: ranh giới mask hàng hóa theo B | Xác nhận/ủy quyền học viên trong chat19/11/2026; qc/calibration_decisions.csv |

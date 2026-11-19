@@ -35,3 +35,7 @@ Bằng chứng: qc/part4_round1/review_stats.json; qc/part4_round2/review_stats.
 Đề xuất: Giữ motorbike cho xe máy hai bánh; mỗi người và mỗi xe có khung riêng. Rà toàn bộ xe theo checklist trước khi chấp nhận, không bỏ qua vì conf cao; đây là lỗi áp dụng/checklist, không đổi định nghĩa lớp.
 
 Quyết định học viên: Học viên chốt: xe máy hai bánh là motorbike; tách person và xe; rà lớp và box trùng theo checklist, không bỏ qua vì conf cao.
+
+## Cập nhật quyết định
+
+Học viên trả lời “cái này mình theo ý bạn” sau đề xuất chốt B và Rework. CAL-02 được ghi là chấp nhận đề xuất kỹ thuật; không mô tả là quyết định độc lập không có AI. Quy tắc đã vào guideline v1.1; kiểm tính nhất quán mask/nhãn là công việc Rework, không tự khẳng định đã sửa xong.
