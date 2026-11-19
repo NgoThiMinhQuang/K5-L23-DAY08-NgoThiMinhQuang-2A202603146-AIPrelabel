@@ -2,13 +2,14 @@
   <img src="docs/assets/hero.png" alt="Day 08 Lab: AI hỗ trợ gán nhãn" width="100%">
 </p>
 
-# Day 08 Lab — AI hỗ trợ gán nhãn: Pre-label, Review, Calibration
+# Day 08 Lab — 2A202603146 - Ngo Thi Minh Quang
 
 <p align="center">
   <img alt="cá nhân" src="https://img.shields.io/badge/lab-cá%20nhân-0b1f3a">
   <img alt="thời lượng" src="https://img.shields.io/badge/thời%20lượng-4%20giờ-ff8a3d">
   <img alt="ảnh" src="https://img.shields.io/badge/dữ%20liệu-36%20ảnh-12b3a8">
-  <img alt="python" src="https://img.shields.io/badge/python-3.10–3.13-3776ab">
+  <img alt="python" src="https://img.shields.io/badge/python-3.10–3.13-3776ab">
+
   <img alt="gpu" src="https://img.shields.io/badge/GPU-không%20bắt%20buộc-2fbf71">
   <a href="https://colab.research.google.com/github/VinUni-AI20k/K5-L23-Day08-AI-Assisted-Labeling/blob/main/notebooks/day08_colab.ipynb"><img alt="Mở trong Colab" src="https://colab.research.google.com/assets/colab-badge.svg"></a>
 </p>
@@ -143,3 +144,12 @@ Chi tiết và cách ghi vào `REPORT.md` mục 1: [docs/MODELS.md](docs/MODELS.
 - **Calibration**: ngưỡng theo lớp · guideline v1.1 · QC với Release / Hold / Rework (nâng cao: đo nhất quán của chính bạn).
 
 <sub>Ảnh minh hoạ giao diện CVAT trong `docs/assets/cvat/` lấy từ tài liệu CVAT (MIT). Sơ đồ khác do giảng viên vẽ (`docs/assets/make_figures.py`).</sub>
+
+<!-- STUDENT_STATUS -->
+## Hồ sơ học viên và trạng thái nộp
+
+**2A202603146 — Ngo Thi Minh Quang — L2.** Windows/CPU; CVAT2.74.1. Báo cáo: [submission/REPORT.md](submission/REPORT.md); đối chiếu rubric và việc còn chờ: [submission/FINAL_AUDIT.md](submission/FINAL_AUDIT.md).
+
+Kết quả bẫy hiện tại **12/12=100% ở vòng sửa có hỗ trợ**. Có24 ảnh batch/586 annotation,3mask SAM từ điểm học viên. QC học viên xác nhận1/5 ảnh lỗi và3/110 đối tượng lỗi. Bộ release hiện tại là **ứng viên**, chưa có phê duyệt cuối; không coi số bẫy100% là mọi nhãn đều đúng.
+
+Còn cần: chốt CAL-02, cung cấp thời gian Gold nếu có đo thật, quyết định xử lý QC và Hold/Rework/Release. Không bịa số liệu để vượt kiểm tra. Log gốc và xác nhận nguồn ở submission/evidence/ và submission/qc/human_confirmations.json. Không đưa work/, models/ hoặc thông tin đăng nhập lên GitHub.

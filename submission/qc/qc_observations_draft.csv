@@ -1,0 +1,4 @@
+image,object_id,candidate_error,observation,status
+img_003.jpg,1|18,thua,Hai khung person có dấu hiệu cùng bao người đàn ông ngồi sau em bé; kiểm tra trùng cá thể.,can_hoc_vien_xac_nhan
+img_003.jpg,7,sai_vi_tri_kich_thuoc,Khung xe ba bánh lớn bắt đầu thấp hơn phần trên mái nhìn thấy; kiểm tra có cắt mất mái không.,can_hoc_vien_xac_nhan
+img_003.jpg,3,sai_lop,Khung three_wheeler ở mép phải cần đối chiếu phương tiện thật; không tự coi là đúng chỉ vì bẫy đã đạt 12/12.,can_hoc_vien_xac_nhan

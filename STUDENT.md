@@ -1,19 +1,21 @@
 # Thông tin học viên
 
-- Họ và tên: <<>>
-- MSHV: <<>>
-- Lớp (L2 / L3 / khác): <<>>
-- Tài khoản GitHub: <<>>
-- Repo bài nộp (URL): <<>>
-- Commit chốt bài (hash): <<>>
-- Máy: <<hệ điều hành, GPU (CUDA / MPS / không có)>>
-- CVAT (Docker): <<phiên bản, ví dụ v2.81.0>>
+- Họ và tên: Ngo Thi Minh Quang (tên không dấu theo repo; học viên kiểm lại cách viết khi nộp).
+- MSHV: 2A202603146
+- Lớp: L2 (học viên xác nhận).
+- Tài khoản GitHub: NgoThiMinhQuang
+- Repo bài nộp: https://github.com/NgoThiMinhQuang/K5-L23-DAY08-NgoThiMinhQuang-2A202603146-AIPrelabel
+- Commit chốt bài: chưa chốt nộp; đang chuẩn bị kỹ thuật, chưa push.
+- Máy: Windows, các model chạy CPU.
+- CVAT Docker: 2.74.1, kiểm qua API /api/server/about ngày19/11/2026.
 
-## Kết quả tóm tắt (điền cuối bài; số lấy từ `submission/qc/*`, kèm mẫu số)
+## Kết quả tóm tắt
 
-- Máy: accepted / edited / deleted: <<... / ... / ... (mẫu số: ... box máy)>>; added: <<... (mẫu số: ... đối tượng)>>
-- So với gold: precision / recall của **máy** <<... / ...>>
-- Bắt bẫy: <<.../12 = ...%>>
-- Thời gian: gán tay <<... phút/ảnh>>; duyệt có pre-label <<... phút/ảnh>>
-- Lỗi QC: <<...% theo ảnh (.../...)>>, <<...% theo đối tượng (.../...)>>
-- **Quyết định:** <<Release / Hold / Rework>> — lý do một dòng: <<...>>
+- Máy: accepted495/621=79.7%; edited38/621=6.1%; deleted85/621=13.7%; added38/571=6.7%.
+- Gold: precision máy42/92=45.7%; recall42/51=82.4%.
+- Bắt bẫy hiện tại: **12/12=100%, vòng sửa có hỗ trợ**; log lịch sử giữ ở submission/qc/part4_round1 và part4_round2.
+- Thời gian: batch_review120 phút/24 ảnh=5 phút/ảnh. Gold: chưa có số phút được cung cấp, chưa tính tốc độ gán tay hoặc mức tiết kiệm.
+- Mask: đúng3 vật từ điểm học viên chọn, SAM2.1 BaseCPU, số điểm4/6/4.
+- QC đã được học viên xác nhận: **1/5 ảnh lỗi=20.0%; 3/110 đối tượng lỗi=2.7%**.
+- Calibration:2 quyết định đã chốt, CAL-02 còn chờ.
+- Quyết định cuối: **chờ học viên**; script đang gợi ý HOLD vì guideline còn mở. Không phải quyết định Release.

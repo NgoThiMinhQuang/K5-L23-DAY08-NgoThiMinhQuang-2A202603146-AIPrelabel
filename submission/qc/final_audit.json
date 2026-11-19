@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-19",
+  "scripts": {
+    "validation_all.txt": {
+      "exit_code": 0,
+      "errors": []
+    },
+    "qc_report_run.txt": {
+      "exit_code": 0,
+      "errors": []
+    },
+    "submission_check.txt": {
+      "exit_code": 1,
+      "errors": [
+        "LỖI: time_log.csv thiếu bước: gold_manual",
+        "LỖI: calibration_decisions.csv: 2 quyết định, cần ≥ 3",
+        "LỖI: calibration_decisions.csv: chưa có ca nào có nguon = cau_hoi_mo"
+      ]
+    }
+  },
+  "format_files_checked": 37,
+  "release": {
+    "images": 24,
+    "annotations": 586,
+    "consistent": true,
+    "approved_final": false
+  },
+  "banned_commit_files": [],
+  "secret_pattern_paths": [],
+  "ignored_preserved_locally": [
+    "submission/labels/gold_manual.zip",
+    "submission/labels/gold_manual/annotations/instances_default.json",
+    "submission/masks/cargo_img003.jpg",
+    "submission/masks/cyclo_img032.jpg"
+  ],
+  "gold_and_source_hashes_verified": {
+    "submission/labels/gold_manual.json": "aef1399a186e9728f6c09ad58d6a42c5c74450811de7696020cf6d568de0fbc1",
+    "submission/labels/batch_reviewed.json": "ca933576019485a69c5f1b35866242ddddc63e29e631acfd4052f2b904c650f4",
+    "submission/prelabel/pre_traps.coco.json": "8298aeaf5c0518559d49f9a814066653cf68a83248f1b0a75fad76f6963e94ad",
+    "submission/prelabel/traps_key.json": "a7b52189ee89dfa7db660bae8684cc32e24d130807e7e02813eb973fd9f12035",
+    "data/split.csv": "ce3de07331d3cb5854639ce45f7faea3f27b8ac0e26a0c81c05a094efb17bb9f"
+  },
+  "pending": [
+    "CAL-02",
+    "gold_manual minutes",
+    "Human final decision"
+  ],
+  "public_repository_verified": true,
+  "repository_name_matches_default_submission_pattern": false
+}

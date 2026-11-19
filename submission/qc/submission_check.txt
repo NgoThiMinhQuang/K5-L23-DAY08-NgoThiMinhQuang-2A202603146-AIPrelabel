@@ -1,0 +1,7 @@
+LỖI: time_log.csv thiếu bước: gold_manual
+LỖI: calibration_decisions.csv: 2 quyết định, cần ≥ 3
+LỖI: calibration_decisions.csv: chưa có ca nào có nguon = cau_hoi_mo
+
+3 lỗi, 0 cảnh báo. Sửa hết LỖI rồi nộp.
+
+Exit code: 1

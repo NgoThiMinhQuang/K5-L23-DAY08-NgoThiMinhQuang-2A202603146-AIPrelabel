@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-19",
+  "class": "L2",
+  "batch_review_minutes": 120,
+  "gold_manual_minutes": null,
+  "qc_confirmation": {
+    "reviewer": "NgoThiMinhQuang",
+    "source": "User explicitly confirmed all three proposed img_003 errors and the other four QC images clean in this chat",
+    "checked_images": [
+      "img_003.jpg",
+      "img_006.jpg",
+      "img_014.jpg",
+      "img_031.jpg",
+      "img_035.jpg"
+    ],
+    "confirmed_errors": [
+      {
+        "image": "img_003.jpg",
+        "object_id": "18",
+        "error_type": "thua",
+        "reviewer": "NgoThiMinhQuang",
+        "note": "Học viên xác nhận trong chat 19/11/2026: person #18 trùng person #1; ID theo release/QC hiện tại."
+      },
+      {
+        "image": "img_003.jpg",
+        "object_id": "7",
+        "error_type": "sai_vi_tri_kich_thuoc",
+        "reviewer": "NgoThiMinhQuang",
+        "note": "Học viên xác nhận: khung xe ba bánh cắt mất phần trên mái."
+      },
+      {
+        "image": "img_003.jpg",
+        "object_id": "3",
+        "error_type": "sai_lop",
+        "reviewer": "NgoThiMinhQuang",
+        "note": "Học viên xác nhận: three_wheeler ở mép phải sai lớp; cần sửa trên CVAT, chưa tự đổi annotation."
+      }
+    ]
+  },
+  "calibration_confirmed": [
+    "CAL-01",
+    "CAL-03"
+  ],
+  "final_release_decision": null,
+  "calibration_pending": [
+    "CAL-02"
+  ],
+  "cvat_version": "2.74.1",
+  "cvat_version_source": "GET http://localhost:8080/api/server/about"
+}

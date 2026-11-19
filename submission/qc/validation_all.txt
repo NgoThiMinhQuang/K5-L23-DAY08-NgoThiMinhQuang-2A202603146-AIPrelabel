@@ -1,0 +1,17 @@
+[submission\labels\gold_manual.json] 4 ảnh, 51 đối tượng: OK
+[submission\labels\batch_reviewed.json] cảnh báo: img_018.jpg: box #192 motorbike cao 14.3px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_018.jpg: box #196 motorbike cao 15.7px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_018.jpg: box #205 person cao 17.4px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_018.jpg: box #215 person cao 16.2px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_018.jpg: box #218 motorbike cao 16.9px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_018.jpg: box #225 motorbike cao 18.3px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_018.jpg: box #230 bicycle cao 16.6px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_025.jpg: box #359 person cao 18.2px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_027.jpg: box #397 car cao 17.2px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_027.jpg: box #408 motorbike cao 18.6px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_027.jpg: box #410 motorbike cao 16.9px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] cảnh báo: img_033.jpg: box #508 motorbike cao 18.6px < 20px (guideline: vật quá nhỏ dùng ignore_region)
+[submission\labels\batch_reviewed.json] ... và 3 cảnh báo nữa
+[submission\labels\batch_reviewed.json] 24 ảnh, 586 đối tượng: OK
+
+Exit code: 0

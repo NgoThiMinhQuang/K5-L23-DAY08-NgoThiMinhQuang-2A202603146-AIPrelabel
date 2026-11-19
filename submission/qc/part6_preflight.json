@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-19",
+  "parts": [
+    {
+      "part": 0,
+      "status": "Có bằng chứng kỹ thuật môi trường đạt ở lần kiểm trước; còn thông tin nộp bài/Git",
+      "evidence": "work/backups/technical_20261119_101526/check_env.txt exit 0; README đã có MSHV; STUDENT còn lớp/CVAT/commit."
+    },
+    {
+      "part": 1,
+      "status": "Gold đã có và được xác nhận trình tự; còn thiếu thời gian Gold thật",
+      "evidence": "4 ảnh/51 annotation; validation trước đó exit 0; time_log gold_manual còn trống."
+    },
+    {
+      "part": 2,
+      "status": "Đủ đầu ra kỹ thuật, chưa điền hết phần nhận xét/recipe báo cáo",
+      "evidence": "6 dòng model_log; 6 thư mục đầu ra; gồm YOLO26, YOLOE và SAM r04."
+    },
+    {
+      "part": 3,
+      "status": "Đủ sản phẩm quét ngưỡng; còn xác nhận giải thích trong REPORT",
+      "evidence": "threshold_sweep.csv/md/png tồn tại; motorbike=0.1, three_wheeler=0.15, các lớp khác 0.3; không chạy lại."
+    },
+    {
+      "part": 4,
+      "status": "Đã có sản phẩm và xác nhận review; giữ phân biệt hai vòng",
+      "evidence": "24 ảnh/586 annotation; batch_review=120 phút; độc lập vòng1 9/12, có hỗ trợ vòng2 12/12."
+    },
+    {
+      "part": 5,
+      "status": "Đủ ba ảnh từ điểm học viên, học viên xác nhận hoàn thành; phần nhận xét mask trong REPORT còn trống",
+      "evidence": "img013 4 điểm, img003 6 điểm, img017 4 điểm; SAM2.1 CPU, exit0; không chạy lại."
+    },
+    {
+      "part": 6,
+      "status": "Chuẩn bị xong, chưa hoàn thành",
+      "evidence": "Release candidate 24 ảnh/586 annotation nhất quán; 5 ảnh QC/110 vật, 0/5 đã kiểm; 3 ca calibration chờ quyết định."
+    }
+  ],
+  "release": {
+    "images": 24,
+    "annotations": 586,
+    "per_class": {
+      "person": 282,
+      "three_wheeler": 24,
+      "bicycle": 9,
+      "motorbike": 209,
+      "car": 53,
+      "truck": 5,
+      "bus": 3,
+      "ignore_region": 1
+    },
+    "matches_batch_geometry_classes": true,
+    "manifest_consistent": true,
+    "summary_consistent": true,
+    "validation_exit": 0,
+    "is_release_candidate_only": true
+  },
+  "qc": {
+    "images": 5,
+    "objects": 110,
+    "unchecked": [],
+    "human_checked": 5,
+    "error_rate": null,
+    "final_decision": null,
+    "confirmed_errors": 3,
+    "error_rate_objects": 0.02727272727272727,
+    "error_rate_images": 0.2
+  },
+  "calibration": {
+    "approved_rows": 2,
+    "candidate_count": 3,
+    "guideline_approved": false,
+    "pending": [
+      "CAL-02"
+    ]
+  },
+  "masks": [
+    {
+      "name": "tuktuk_img013",
+      "dimensions": [
+        1024,
+        682
+      ],
+      "positive": 2,
+      "negative": 2,
+      "model": "sam2.1_b.pt",
+      "points_source": "User supplied in chat; no points selected by assistant",
+      "user_completion_confirmation": "User stated Part 5 completed; detailed mask observations still missing from REPORT"
+    },
+    {
+      "name": "three-wheeler_img003",
+      "dimensions": [
+        1024,
+        682
+      ],
+      "positive": 3,
+      "negative": 3,
+      "model": "sam2.1_b.pt",
+      "points_source": "User supplied in chat; no points selected by assistant",
+      "user_completion_confirmation": "User stated Part 5 completed; detailed mask observations still missing from REPORT"
+    },
+    {
+      "name": "tuktuk_img017",
+      "dimensions": [
+        1024,
+        682
+      ],
+      "positive": 2,
+      "negative": 2,
+      "model": "sam2.1_b.pt",
+      "points_source": "User supplied in chat; no points selected by assistant",
+      "user_completion_confirmation": "User stated Part 5 completed; detailed mask observations still missing from REPORT"
+    }
+  ],
+  "existing_runs": [
+    {
+      "directory": "t_y26",
+      "images": 8,
+      "annotations": 215,
+      "segmentation_nonempty": 0
+    },
+    {
+      "directory": "t_y26_c05",
+      "images": 8,
+      "annotations": 139,
+      "segmentation_nonempty": 0
+    },
+    {
+      "directory": "t_yoloe",
+      "images": 8,
+      "annotations": 8,
+      "segmentation_nonempty": 0
+    },
+    {
+      "directory": "t_sam",
+      "images": 2,
+      "annotations": 16,
+      "segmentation_nonempty": 16
+    },
+    {
+      "directory": "y26_all",
+      "images": 36,
+      "annotations": 1669,
+      "segmentation_nonempty": 0
+    },
+    {
+      "directory": "yoloe_all",
+      "images": 36,
+      "annotations": 125,
+      "segmentation_nonempty": 0
+    }
+  ],
+  "protected_inputs_sha256": {
+    "data/ATTRIBUTION.csv": "fa4cef280bc1d9dfbd058ed3947222da59f418f0bb38b211ccc060d54b924d2c",
+    "data/fetch_candidates.py": "30f6ea80193d89417dbd5d6f8509f3932c15cd6c7cf9ff6874c2b73c4a2e3a6c",
+    "data/README.md": "e1043e17729eaea0a9213d9c3d143707f86a273c9a46cb607149d5abcc800bda",
+    "data/split.csv": "ce3de07331d3cb5854639ce45f7faea3f27b8ac0e26a0c81c05a094efb17bb9f",
+    "data/cache/yolo26m_all_c005.coco.json": "df12dad467e31a90ebceba4317167c8d4f580aba862eaa459fb3ca96001348f7",
+    "data/cache/yoloe26s_three_wheeler_all_c005.coco.json": "2ee10cc58ffaf8ff03ccfad50e4beba324dc204315e8ad4c61ebc72afe02b26a",
+    "data/images/img_001.jpg": "9ee9867ee584c3a366c9d849aac8786128c9ff590f4caa2c42dcb1d497383354",
+    "data/images/img_002.jpg": "8d2bf93f9026b1676533f71a4ebc2e13aac13abe05dd2b0aabc04298e4c7fb7c",
+    "data/images/img_003.jpg": "c0637a7071f649924d3bc2d4ee50aaf6e773dad7d15c1df0a9aa8575328fca38",
+    "data/images/img_004.jpg": "c07d387358c1d958a61392c8eb4f4d7e77d4b11a9befa7127e82277d2fc72cc1",
+    "data/images/img_005.jpg": "5b2785fa1036d1030163f4e272255a758f9e360bf374ec88b55dbfc06994c8e2",
+    "data/images/img_006.jpg": "ac51984b83241cc9111a3e28de30f6148d915ab7b3b8ef2d87b19fc4c5960bf1",
+    "data/images/img_007.jpg": "9f833704cda5066659f450ad08eaa4284ea54a5f6d568862569708cef6e6afb9",
+    "data/images/img_008.jpg": "1026b7a157a4c61243aa24f6367b82de2108779f012c00c12f56c116f070c9cc",
+    "data/images/img_009.jpg": "a58f4238baa646279a7a68f64545eb5b64c5c556310abfa104f86c752be71afd",
+    "data/images/img_010.jpg": "158e7e5e9aca80eca75fd346c35469d6657ee81f30b63dbb4b5e39798e8315e3",
+    "data/images/img_011.jpg": "ccde8e1d9ffed757a032045bbfdab03f2d693a103983db9a2a1a6cc47f74564b",
+    "data/images/img_012.jpg": "dc90061b5da1329e8920535bce180c0c0bd941962bd1af09f7a4120f29c866f6",
+    "data/images/img_013.jpg": "82163a7e6c4ca7e3420acf3a3402e70040e99e9bc0b727a8951b68b6c4987c8b",
+    "data/images/img_014.jpg": "073ed780bb450ad7fe89f7ce84567f44fb18cd58ebb95e1d2b2d460114cd6999",
+    "data/images/img_015.jpg": "5a7834ff0798404fd06b6ba6c6be648c340cb77b58996dba65366fb563ee22c3",
+    "data/images/img_016.jpg": "e4338785946e0cb38f97af070ffc26b70d368ca716dc38707330230e5dcbf324",
+    "data/images/img_017.jpg": "bd4ab57c5aaa10933a2081dbe6e4931184ad1d4a5463bbcedeba1a4f2caf59a5",
+    "data/images/img_018.jpg": "f79c406975e19a987026be4e2b7543249e660db2e5f48439f9c0e0935cb17457",
+    "data/images/img_019.jpg": "56f8911375197ad1b6c64beff420c9f856856c175ac6ae2b7694ea1f1ace220d",
+    "data/images/img_020.jpg": "275627b942db8f390fcd07addf43a954682b4c4757ad1f024942909213a04b44",
+    "data/images/img_021.jpg": "7371e900f853c55e5ae0cf352a5f8a407f88db95c6c88b0ea2c0acdec99535c4",
+    "data/images/img_022.jpg": "c1d0695b229c56cb410aa4aa579ca01e5d9ea463762ea3ba6e78968f2a7f8f23",
+    "data/images/img_023.jpg": "8751b685de7137d53242e4e308394d485dd6665c8ab827b41877e47a67df3d79",
+    "data/images/img_024.jpg": "956ba5f772f2b9ee3bf90ed8cc5cc8efa6854a77a55c51de2690130856e493fd",
+    "data/images/img_025.jpg": "7cdb784eb6e9b7aeb438feef9e478fa5ebdcafe32dc295a92aeaa5a81ebd38a1",
+    "data/images/img_026.jpg": "8991d6555e3cfbb30e040d07b6cb0b815e6eb08147ccc4ca88532ae3b270b986",
+    "data/images/img_027.jpg": "f3daaadab30b9ed75b07e436fbef63f8437357dd9f1148c71e0a16734ef4899d",
+    "data/images/img_028.jpg": "0104e7f63cd5727317a7949c64500e3b3911c694766b6a051ae629fda5deeb4c",
+    "data/images/img_029.jpg": "9503ffc8dde0d8c195a4a709a941f7e68903d3e63f30f07ae57f347c41b105da",
+    "data/images/img_030.jpg": "338aa72be0c32a3954b5280fc1933578047181c744c9c3cc0db904e9ebf7461c",
+    "data/images/img_031.jpg": "bf1f55bed168c30b3fa7f92fc7298f619497d93fb49183cf1be629103063ba42",
+    "data/images/img_032.jpg": "7e952a0bcddbc85f4f9bec093aa9b9d27519683596f649bad9ea5088ca746c4a",
+    "data/images/img_033.jpg": "80b7b5d134a4fd4c1dafc44c35193fafb9412c103825d02a507fbf91efcbe9de",
+    "data/images/img_034.jpg": "c6b8943682b86c8137365a89c2c439405d22bcec443b3d6de07b568f20e35be0",
+    "data/images/img_035.jpg": "60fe73ff84a7f71719a190b53ca297aa927dd49b20ab9cb6592069a4694f2f4d",
+    "data/images/img_036.jpg": "a6e49af8cd0c08053987c1e1002d936bf93bc5ab622bc67ad8afa57342dcd947",
+    "submission/labels/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "submission/labels/batch_reviewed.json": "ca933576019485a69c5f1b35866242ddddc63e29e631acfd4052f2b904c650f4",
+    "submission/labels/gold_manual.json": "aef1399a186e9728f6c09ad58d6a42c5c74450811de7696020cf6d568de0fbc1",
+    "submission/labels/gold_manual.zip": "a662174b6bc5503770dcc7d0bd7b859c8e7f464a3cbd4c75cd21f0ad303b7c3c",
+    "submission/labels/gold_manual/annotations/instances_default.json": "aef1399a186e9728f6c09ad58d6a42c5c74450811de7696020cf6d568de0fbc1",
+    "submission/prelabel/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "submission/prelabel/pre_traps.coco.json": "8298aeaf5c0518559d49f9a814066653cf68a83248f1b0a75fad76f6963e94ad",
+    "submission/prelabel/pre_traps_import.coco.json": "c241bfffd471d515c8027042cbac890a7792585acba64a0ac0abff93e5061dff",
+    "submission/prelabel/traps_key.json": "a7b52189ee89dfa7db660bae8684cc32e24d130807e7e02813eb973fd9f12035",
+    "submission/masks/cargo_img003.jpg": "b02405e28a7841d71e2ac95486b717a934aa3e46ae7bdd4e256133d588328721",
+    "submission/masks/cyclo_img032.jpg": "baae5e09979c930aac8377ca194e7eb0869400ae72d739228f1d4cf858e44805",
+    "submission/masks/README.md": "f93f27c7d8311e6498d19c05fc3002f29a6df57223f518a9ed64eee7c992589c",
+    "submission/masks/three-wheeler_img003.jpg": "155d2282ffe6468135fcb887296e33cdfe554d5e97eeb58198dfd4ae9938ba6a",
+    "submission/masks/tuktuk_img013.jpg": "a698319bbc21f2703c971954360ae8f653ec6bcaefc18de7ea79ce5a98d82b39",
+    "submission/masks/tuktuk_img017.jpg": "db9fe8499ebe89e2383dbed8d6b4274dc3c4af7a1b4984fba7069801ea308480",
+    "submission/masks/logs/three-wheeler_img003.json": "9f7900fb79b549daa896ed9e7d97b894349f6cb08a0ab9cdb89d2e16f3a96f47",
+    "submission/masks/logs/three-wheeler_img003.txt": "d2eb74ef5e8eb3ba0db68e700d7d79c32aee306ce203bd8efcb9bab64b957ccb",
+    "submission/masks/logs/tuktuk_img013.json": "39080a79b179472077fb98bb59a7904a1ad05c281b8680f8c37876648ac2b2e6",
+    "submission/masks/logs/tuktuk_img013.txt": "a46d38950916a07d62485eaf7f8979d91293244f7f3000859fc48da5f8106306",
+    "submission/masks/logs/tuktuk_img017.json": "f39ec7624da422e962e05d1fd25e5d40646003536d7e48a8065603283dd86d82",
+    "submission/masks/logs/tuktuk_img017.txt": "a9d11588c10fde58c650b14a00bb3cfac60f429d67fff1186c285b22ecdcdcaf",
+    "submission/model_log.csv": "da4befcb9870e3d89c85877f6dc484131190b1bec679bb9f823c5a8a841cdd5d",
+    "submission/time_log.csv": "07fbbdfb05c51f4679eaad5d0931957af88e92cfab81e79f2e3738da0f121eab",
+    "submission/taxonomy.json": "f483281705df74c7336105c1dad9f1f51e9aeed67328da8a6ebd0ed0b460e516",
+    "submission/qc/threshold_sweep.csv": "aa07169f6094214a68fb8a42e765fb6f8b30e9f6846bb0ab186a48f6970e0237",
+    "submission/qc/threshold_sweep.md": "41bef9ed0f71ec5bcacb76624f128c2eaa5b54a1885dabb8dbc449cb72f6d57b",
+    "submission/qc/threshold_sweep.png": "68f4961551a29892162511f69b8ca8223fdaf48851261adaadaa851babc09967",
+    "submission/qc/review_stats.json": "86880ac8936838eb5d32060917080153db131c1ac57a9ee8e27a2b04ae4db521",
+    "submission/qc/review_stats.md": "e04d402e2eb0ea9ba6ce0a6628102fa1029d45c7ffce89848374604e62efc24f"
+  },
+  "not_rerun": [
+    "Part2 models",
+    "Part3 threshold sweep",
+    "Part4 review statistics",
+    "Part5 SAM inference"
+  ],
+  "blocked_on": [
+    "CAL-02 confirmation",
+    "Measured Gold duration or explicit unavailable disclosure",
+    "Human final Hold/Rework/Release decision"
+  ],
+  "protected_inputs_unchanged": true,
+  "latest_audit": "submission/FINAL_AUDIT.md"
+}
