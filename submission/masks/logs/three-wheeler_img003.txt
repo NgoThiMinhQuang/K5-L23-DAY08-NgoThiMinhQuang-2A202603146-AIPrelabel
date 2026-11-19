@@ -1,0 +1,5 @@
+D:\K5-L23-DAY08-NgoThiMinhQuang-2A202603146-AIPrelabel\.venv\Scripts\python.exe -B -X utf8 scripts/sam2_points.py --image img_003.jpg --pos 431,139 --pos 595,385 --pos 389,547 --neg 328,324 --neg 417,277 --neg 314,359 --sam sam2.1_b.pt --device cpu --out submission/masks --name three-wheeler_img003
+
+Mask: 112772 px (16.1% ảnh), 2 polygon -> submission\masks\three-wheeler_img003.jpg
+
+Exit code: 0

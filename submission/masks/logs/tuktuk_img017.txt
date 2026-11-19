@@ -1,0 +1,5 @@
+D:\K5-L23-DAY08-NgoThiMinhQuang-2A202603146-AIPrelabel\.venv\Scripts\python.exe -B -X utf8 scripts/sam2_points.py --image img_017.jpg --pos 329,338 --pos 339,485 --neg 492,482 --neg 202,404 --sam sam2.1_b.pt --device cpu --out submission/masks --name tuktuk_img017
+
+Mask: 45174 px (6.5% ảnh), 1 polygon -> submission\masks\tuktuk_img017.jpg
+
+Exit code: 0

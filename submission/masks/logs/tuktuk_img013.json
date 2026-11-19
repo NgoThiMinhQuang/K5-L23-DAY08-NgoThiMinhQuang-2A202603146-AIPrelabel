@@ -1,0 +1,40 @@
+{
+  "image": "img_013.jpg",
+  "positive": [
+    "304,487",
+    "450,115"
+  ],
+  "negative": [
+    "709,324",
+    "802,492"
+  ],
+  "positive_count": 2,
+  "negative_count": 2,
+  "points_source": "User supplied in chat; no points selected by assistant",
+  "model": "sam2.1_b.pt",
+  "device": "cpu",
+  "output": "submission/masks/tuktuk_img013.jpg",
+  "exit_code": 0,
+  "quality_review": "Pending user inspection",
+  "command": [
+    "scripts/sam2_points.py",
+    "--image",
+    "img_013.jpg",
+    "--pos",
+    "304,487",
+    "--pos",
+    "450,115",
+    "--neg",
+    "709,324",
+    "--neg",
+    "802,492",
+    "--sam",
+    "sam2.1_b.pt",
+    "--device",
+    "cpu",
+    "--out",
+    "submission/masks",
+    "--name",
+    "tuktuk_img013"
+  ]
+}

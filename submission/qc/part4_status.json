@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-19",
+  "export_sha256": "ca933576019485a69c5f1b35866242ddddc63e29e631acfd4052f2b904c650f4",
+  "batch_images": 24,
+  "annotations": 586,
+  "exact_batch_split": true,
+  "validation_exit": 0,
+  "batch_review_minutes": 120,
+  "trap_caught": 12,
+  "trap_total": 12,
+  "threshold": 0.8,
+  "technical_outputs_ready": true,
+  "quality_threshold_met": true,
+  "cp4_complete": true,
+  "next_action": "Part 5/6; retain independent round1 and disclose assisted round2; QC still pending",
+  "protected_inputs_unchanged": true,
+  "protected_sha256": {
+    "submission/labels/gold_manual.json": "aef1399a186e9728f6c09ad58d6a42c5c74450811de7696020cf6d568de0fbc1",
+    "submission/labels/batch_reviewed.json": "ca933576019485a69c5f1b35866242ddddc63e29e631acfd4052f2b904c650f4",
+    "submission/prelabel/pre_traps.coco.json": "8298aeaf5c0518559d49f9a814066653cf68a83248f1b0a75fad76f6963e94ad",
+    "submission/prelabel/traps_key.json": "a7b52189ee89dfa7db660bae8684cc32e24d130807e7e02813eb973fd9f12035",
+    "data/split.csv": "ce3de07331d3cb5854639ce45f7faea3f27b8ac0e26a0c81c05a094efb17bb9f"
+  },
+  "round": 2,
+  "assisted": true,
+  "independent_round1": {
+    "caught": 9,
+    "total": 12,
+    "rate": 0.75
+  }
+}

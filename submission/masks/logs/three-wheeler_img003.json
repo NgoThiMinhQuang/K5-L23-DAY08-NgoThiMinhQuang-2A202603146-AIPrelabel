@@ -1,0 +1,46 @@
+{
+  "image": "img_003.jpg",
+  "positive": [
+    "431,139",
+    "595,385",
+    "389,547"
+  ],
+  "negative": [
+    "328,324",
+    "417,277",
+    "314,359"
+  ],
+  "positive_count": 3,
+  "negative_count": 3,
+  "points_source": "User supplied in chat; no points selected by assistant",
+  "model": "sam2.1_b.pt",
+  "device": "cpu",
+  "output": "submission/masks/three-wheeler_img003.jpg",
+  "exit_code": 0,
+  "quality_review": "Pending user inspection",
+  "command": [
+    "scripts/sam2_points.py",
+    "--image",
+    "img_003.jpg",
+    "--pos",
+    "431,139",
+    "--pos",
+    "595,385",
+    "--pos",
+    "389,547",
+    "--neg",
+    "328,324",
+    "--neg",
+    "417,277",
+    "--neg",
+    "314,359",
+    "--sam",
+    "sam2.1_b.pt",
+    "--device",
+    "cpu",
+    "--out",
+    "submission/masks",
+    "--name",
+    "three-wheeler_img003"
+  ]
+}
