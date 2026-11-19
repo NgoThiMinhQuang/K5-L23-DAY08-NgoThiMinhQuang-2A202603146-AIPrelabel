@@ -10,3 +10,9 @@ models/*
 *.onnx
 _review/
 *.ts
+
+# Local export duplicates and assistant-only SAM demos (preserved locally)
+submission/labels/gold_manual.zip
+submission/labels/gold_manual/
+submission/masks/cargo_img003.jpg
+submission/masks/cyclo_img032.jpg
