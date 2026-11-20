@@ -18,4 +18,4 @@
 - Mask: đúng3 vật từ điểm học viên chọn, SAM2.1 BaseCPU, số điểm4/6/4.
 - Kết quả QC sau sửa: **0/5 ảnh lỗi=0.0%; 0/108 đối tượng lỗi=0.0%**. Img_003 được kiểm lại sau sửa; bốn ảnh khác giữ xác nhận vì nhãn không đổi. Vòng trước lưu riêng.
 - Calibration:3 quyết định đã chốt, gồm CAL-02 phương ánB đã được chọn và ghi trong guideline v1.1.
-- Quyết định: **Release bộ nhãn detection**, ngày20/11/2026, sau xác nhận ảnh sửa sạch và các kiểm tra đạt. Bộ cuối24 ảnh/584 annotation; không bao gồm chứng nhận chất lượng segmentation.
+- Quyết định: **Release bộ nhãn detection**, ngày19/11/2026, sau xác nhận ảnh sửa sạch và các kiểm tra đạt. Bộ cuối24 ảnh/584 annotation; không bao gồm chứng nhận chất lượng segmentation.

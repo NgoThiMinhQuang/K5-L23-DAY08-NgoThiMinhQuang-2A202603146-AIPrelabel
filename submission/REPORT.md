@@ -1,6 +1,6 @@
 # Báo cáo Day 08 — 2A202603146 - Ngo Thi Minh Quang
 
-> Tôi thực hiện bài lab trên Windows, sử dụng CPU và CVAT Docker 2.74.1. Báo cáo tổng hợp quá trình chạy model, review nhãn, tạo mask và kiểm tra chất lượng. Sau QC, tôi sửa các lỗi đã phát hiện trên CVAT, kiểm lại bản export và chọn Release bộ nhãn detection ngày 20/11/2026.
+> Tôi thực hiện bài lab trên Windows, sử dụng CPU và CVAT Docker 2.74.1. Báo cáo tổng hợp quá trình chạy model, review nhãn, tạo mask và kiểm tra chất lượng. Sau QC, tôi sửa các lỗi đã phát hiện trên CVAT, kiểm lại bản export và chọn Release bộ nhãn detection ngày 19/11/2026.
 
 ## 1. Model và recipe (Part 2–3)
 
@@ -163,7 +163,7 @@ Tôi cập nhật release/final_det.coco.json, release_summary.csv và release_m
 
 Bộ này gồm583 đối tượng và1 vùng ignore_region. Gold, batch review gốc, đáp án bẫy, log model và ba mask dùng điểm tôi chọn không bị thay đổi. Phạm vi Release là nhãn detection; không coi đây là chứng nhận chất lượng cho các mask SAM thực nghiệm.
 
-**Tôi chọn Release bộ nhãn detection, ngày20/11/2026**, sau khi xem ảnh sửa và các kiểm tra đạt. Lý do: ba lỗi QC đã được xử lý, mẫu hiện tại không ghi nhận lỗi, đủ3ca calibration và bộ dữ liệu hợp lệ. Tôi giữ các giới hạn của mẫu nhỏ trong báo cáo và lưu riêng dữ liệu trước/sau sửa để truy vết.
+**Tôi chọn Release bộ nhãn detection, ngày19/11/2026**, sau khi xem ảnh sửa và các kiểm tra đạt. Lý do: ba lỗi QC đã được xử lý, mẫu hiện tại không ghi nhận lỗi, đủ3ca calibration và bộ dữ liệu hợp lệ. Tôi giữ các giới hạn của mẫu nhỏ trong báo cáo và lưu riêng dữ liệu trước/sau sửa để truy vết.
 
 ## 8. Ghi chú cá nhân và môi trường thực nghiệm
 

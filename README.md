@@ -154,7 +154,7 @@ Chi tiết và cách ghi vào `REPORT.md` mục 1: [docs/MODELS.md](docs/MODELS.
 - Có3mask SAM2.1 từ điểm tôi chọn.
 - Sau sửaQC, bộ detection cuối có **24 ảnh/584 annotation**, taxonomyv1.1. Nhãn trước sửa vẫn được lưu riêng.
 - QC hiện tại: **0/5 ảnh lỗi,0/108 đối tượng lỗi**; mẫu nhỏ, cận trên95% tỷ lệ ảnh lỗi thật khoảng43%.
-- Quyết định ngày20/11/2026: **Release bộ nhãn detection**. MaskSAM là kết quả thực nghiệm riêng.
+- Quyết định ngày19/11/2026: **Release bộ nhãn detection**. MaskSAM là kết quả thực nghiệm riêng.
 - Gold15phút/4ảnh là thời lượng tôi cung cấp sau khi làm, không cólogbấmgiờ; ghi đúng nguồn trong time_log.csv.
 
 Giữ data/ATTRIBUTION.csv, log và nguồn nhãn để tái lập. Không commit work/, models/, trọng số hoặc thông tin đăng nhập.

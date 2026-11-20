@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-19",
   "source": "C:/Users/Moderator/Downloads/batch_qc_fixed.zip",
   "zip_sha256": "1704d76bb9d40f81a753da36c875f040b5375eb955235dba1c9f47e00e994fec",
   "export_images": 24,
@@ -15,7 +15,7 @@
     "expanded_vehicle_box_present": true,
     "wrong_class_edge_box_removed": true
   },
-  "human_final_qc": "User confirmed img003 clean on 2026-11-20; prior clean confirmations retained only for unchanged images",
+  "human_final_qc": "User confirmed img003 clean on 2026-11-19; prior clean confirmations retained only for unchanged images",
   "release_decision": "Release detection after passing checks",
   "validation": {
     "validation_all.txt": {

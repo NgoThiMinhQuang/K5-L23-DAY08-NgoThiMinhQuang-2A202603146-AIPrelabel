@@ -77,10 +77,10 @@ Bảng đối chiếu rubric mới nhất: submission/FINAL_AUDIT.md. Các ghi c
 
 Học viên cung cấp tổng15phút cho4ảnhGold, trung bình3,75phút/ảnh. time_logđã cập nhật nguồn tự báo cáo sau khi hoàn thành, không cólogbấmgiờ. Các ghi chú thiếu thời gian phía trên là lịch sử trước lần bổ sung này; không đổi nhãnGold hoặc kết quả thí nghiệm.
 
-## Kết quả sau sửa QC — 20/11/2026
+## Kết quả sau sửa QC — 19/11/2026
 
 - Export mới đúng24ảnh/584annotation; chỉimg_003đổi. Táchqc_fixed.json1ảnh/22annotation từnhãnthật.
 - Đãbuild/validateReleasev1.1;manifest/summarykhớp;Gold/batchtrướcsửa/bẫy/mask/loggốcgiữnguyên.
 - HọcviênxemảnhQCmớivàxácnhậnimg_003sạch;4ảnhkhácnhãnkhôngđổinêngiữxácnhậntrước. Mẫu5ảnh/108vật,0lỗiquansát.
 - Đủ3calibration;check_submission0lỗi/0cảnhbáocấutrúc. Gold15phútlàthờilượngtựbáocáosaukhihoànthành,khôngcólogbấmgiờ.
-- QuyếtđịnhReleasebộnhãndetectionngày20/11/2026đãđượchọcviênđồngýcóđiềukiện,vàkiểmtrađãđạt. Vẫngiữgiớihạnmẫunhỏ,khôngcoitoànbộlôhoặcsegmentationđãhoànhảo.
+- QuyếtđịnhReleasebộnhãndetectionngày19/11/2026đãđượchọcviênđồngýcóđiềukiện,vàkiểmtrađãđạt. Vẫngiữgiớihạnmẫunhỏ,khôngcoitoànbộlôhoặcsegmentationđãhoànhảo.

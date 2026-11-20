@@ -56,7 +56,7 @@
     }
   ],
   "qc_round2_confirmation": {
-    "date": "2026-11-20",
+    "date": "2026-11-19",
     "changed_image_checked": "img_003.jpg",
     "result": "khong",
     "unchanged_images_carried_forward": [
@@ -70,6 +70,6 @@
     "confirmed_errors": 0,
     "source": "User explicitly reviewed new img003 preview, confirmed clean and approved detection Release conditional on passing checks"
   },
-  "decision_date": "2026-11-20",
+  "decision_date": "2026-11-19",
   "release_checks_passed": true
 }

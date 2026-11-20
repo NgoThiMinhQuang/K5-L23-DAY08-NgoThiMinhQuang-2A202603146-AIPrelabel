@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-19",
   "scope": "Detection labels only; experimental SAM masks not re-generated or certified by this release",
   "decision": "Release",
   "human_conditional_approval": true,

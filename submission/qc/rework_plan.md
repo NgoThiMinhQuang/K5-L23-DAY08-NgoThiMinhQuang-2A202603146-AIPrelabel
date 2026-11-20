@@ -1,4 +1,4 @@
-> Cập nhật20/11/2026: ba lỗi detection dưới đây đã được sửa trong export mới. qc_fixed.json đã được áp dụng; học viên xác nhận ảnh sạch và chốtRelease detection sau kiểmtra. Kế hoạch phía dưới được giữ làm lịch sử. MaskSAM vẫn là kết quảthựcnghiệmriêng.
+> Cập nhật19/11/2026: ba lỗi detection dưới đây đã được sửa trong export mới. qc_fixed.json đã được áp dụng; học viên xác nhận ảnh sạch và chốtRelease detection sau kiểmtra. Kế hoạch phía dưới được giữ làm lịch sử. MaskSAM vẫn là kết quảthựcnghiệmriêng.
 
 # Kế hoạch Rework — 19/11/2026
 

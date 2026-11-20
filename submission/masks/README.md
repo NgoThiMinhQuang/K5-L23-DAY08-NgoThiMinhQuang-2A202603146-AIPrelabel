@@ -1,6 +1,6 @@
 # Part 5 — SAM 2.1, điểm do học viên cung cấp
 
-Trạng thái: đã có ba kết quả SAM2.1 từ tọa độ học viên chọn; học viên đã xác nhận hoàn thành thực hành Part5. Phân tích được ghi trong REPORT mục5. Đây là mask thực nghiệm; quyết định Release ngày20/11/2026 chỉ áp dụng cho nhãn detection, không phải chứng nhận sai số biên của segmentation.
+Trạng thái: đã có ba kết quả SAM2.1 từ tọa độ học viên chọn; học viên đã xác nhận hoàn thành thực hành Part5. Phân tích được ghi trong REPORT mục5. Đây là mask thực nghiệm; quyết định Release ngày19/11/2026 chỉ áp dụng cho nhãn detection, không phải chứng nhận sai số biên của segmentation.
 
 Model models/sam2.1_b.pt nạp thành công (161935802 byte). Script sam2_points.py không có giao diện click: nhận tọa độ pixel ảnh gốc qua --pos/--neg.
 

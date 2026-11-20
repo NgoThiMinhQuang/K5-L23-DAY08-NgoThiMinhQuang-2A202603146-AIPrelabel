@@ -1,4 +1,4 @@
-# Đối chiếu rubric — cập nhật20/11/2026
+# Đối chiếu rubric — cập nhật19/11/2026
 
 Bảng kiểm kê bằng chứng, không phải điểm giảng viên chấm. Kết quả bẫy Part4 là12/12=100% ở vòng sửa có đối chiếu đáp án. Nhãn trướcQC và lịch sử được giữ nguyên.
 
@@ -23,10 +23,10 @@ Validation vàcheck_submission.py:0lỗi/0cảnhbáo ởkiểmtracấutrúcbàin
 
 ## Phạm vi quyết định
 
-**Release nhãn detection, ngày20/11/2026.** Không tựtạorelease/tagGitHub,khôngchứngnhậnmasksegmentationhoànhảo. BằngchứngvòngQCcũởqc/qc_before_fixed_20261120;vòngmớiởqc/qc_fixed_round2;quyếtđịnhvàkiểmtraởqc/release_verification.json.
+**Release nhãn detection, ngày19/11/2026.** Không tựtạorelease/tagGitHub,khôngchứngnhậnmasksegmentationhoànhảo. BằngchứngvòngQCcũởqc/qc_before_fixed_20261120;vòngmớiởqc/qc_fixed_round2;quyếtđịnhvàkiểmtraởqc/release_verification.json.
 
 Repođãpublic. CầnkiểmquyướctênrepocủalớpvìtênhiệntạiđặtHoTentrướcMSHV,khácmẫumặcđịnhSUBMISSION. Cáccommitchuẩnbịkhôngbackdate;khôngtuyênbốlịchsửđượctạotrongquátrìnhlàmtừngPart. Giữnguồn/thôngtincá nhânđúngthựctế.
 
-## Rà soát toàn thư mục ngày20/11/2026
+## Rà soát toàn thư mục ngày19/11/2026
 
 Đã quét218file được Git quản lý tại thời điểm rà:24filePython,37JSON/notebook,17CSV,78ảnh và38Markdown. Không thấy lỗi cú pháp, JSON/CSV, tham chiếuCOCO, ảnh hỏng hoặc liên kết nội bộ bị gãy. 12/12test hồi quy qua; môi trường sẵn sàng và CVATHTTP200. Đã sửa trạng thái cũ ở tài liệu mask/calibration và đồng bộ bảng đếm lớp preflight. Báo cáo chi tiết: qc/folder_audit_20261120.json. Các thư viện trong .venv, trọng sốmodels và bản sao tạmwork là dữ liệu cục bộ, không nằm trong phạm vi sửa mã nguồn hoặc commit.
