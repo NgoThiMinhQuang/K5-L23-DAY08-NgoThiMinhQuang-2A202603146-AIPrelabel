@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-20",
+  "scope": "Detection labels only; experimental SAM masks not re-generated or certified by this release",
+  "decision": "Release",
+  "human_conditional_approval": true,
+  "conditions_passed": true,
+  "images": 24,
+  "annotations": 584,
+  "taxonomy_version": "v1.1",
+  "source_qc_fixed_images": [
+    "img_003.jpg"
+  ],
+  "matches_user_full_export": true,
+  "sample_images": 5,
+  "sample_objects": 108,
+  "qc_error_objects": 0,
+  "qc_error_images": 0,
+  "qc_round1_archive": "submission/qc/qc_before_fixed_20261120",
+  "checks": {
+    "validation_all.txt": {
+      "exit_code": 0,
+      "errors": []
+    },
+    "qc_fixed_validation.txt": {
+      "exit_code": 0,
+      "errors": []
+    },
+    "final_detection_validation.txt": {
+      "exit_code": 0,
+      "errors": []
+    },
+    "qc_report_run.txt": {
+      "exit_code": 0,
+      "errors": []
+    },
+    "submission_check.txt": {
+      "exit_code": 0,
+      "errors": []
+    }
+  },
+  "small_sample_limit": "0/5 observed errors does not prove population image error rate <=2%; Wilson95% upper bound about43%",
+  "original_sources_unchanged": true
+}

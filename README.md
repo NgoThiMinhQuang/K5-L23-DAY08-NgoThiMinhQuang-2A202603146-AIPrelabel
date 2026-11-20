@@ -146,10 +146,15 @@ Chi tiết và cách ghi vào `REPORT.md` mục 1: [docs/MODELS.md](docs/MODELS.
 <sub>Ảnh minh hoạ giao diện CVAT trong `docs/assets/cvat/` lấy từ tài liệu CVAT (MIT). Sơ đồ khác do giảng viên vẽ (`docs/assets/make_figures.py`).</sub>
 
 <!-- STUDENT_STATUS -->
-## Hồ sơ học viên và trạng thái nộp
+## Hồ sơ học viên và kết quả
 
-**2A202603146 — Ngo Thi Minh Quang — L2.** Windows/CPU; CVAT2.74.1. Báo cáo: [submission/REPORT.md](submission/REPORT.md); đối chiếu rubric và việc còn chờ: [submission/FINAL_AUDIT.md](submission/FINAL_AUDIT.md).
+**2A202603146 — Ngo Thi Minh Quang — L2.** Windows/CPU; CVAT2.74.1. [Báo cáo](submission/REPORT.md) và [đối chiếu rubric](submission/FINAL_AUDIT.md).
 
-Kết quả bẫy hiện tại **12/12=100% ở vòng sửa có hỗ trợ**. Có24 ảnh batch/586 annotation,3mask SAM từ điểm học viên. QC học viên xác nhận1/5 ảnh lỗi và3/110 đối tượng lỗi. Bộ release hiện tại là **ứng viên**, chưa có phê duyệt cuối; không coi số bẫy100% là mọi nhãn đều đúng.
+- Bẫy Part4: **12/12=100% ở vòng sửa có đối chiếu đáp án**, giữ nguyên lịch sử từng vòng.
+- Có3mask SAM2.1 từ điểm tôi chọn.
+- Sau sửaQC, bộ detection cuối có **24 ảnh/584 annotation**, taxonomyv1.1. Nhãn trước sửa vẫn được lưu riêng.
+- QC hiện tại: **0/5 ảnh lỗi,0/108 đối tượng lỗi**; mẫu nhỏ, cận trên95% tỷ lệ ảnh lỗi thật khoảng43%.
+- Quyết định ngày20/11/2026: **Release bộ nhãn detection**. MaskSAM là kết quả thực nghiệm riêng.
+- Gold15phút/4ảnh là thời lượng tôi cung cấp sau khi làm, không cólogbấmgiờ; ghi đúng nguồn trong time_log.csv.
 
-Đã chốt CAL-02B và quyết định Rework theo đề xuất kỹ thuật. Học viên bổ sung thời lượngGold15phút/4ảnh; time_log ghi rõ đây là thời lượng tự báo cáo sau khi hoàn thành, không có log bấm giờ. Còn việc sửaQC/kiểmmask nếu muốn tiến tớiRelease. Không bịa số liệu để vượt kiểm tra. Log gốc và xác nhận nguồn ở submission/evidence/ và submission/qc/human_confirmations.json. Không đưa work/, models/ hoặc thông tin đăng nhập lên GitHub.
+Giữ data/ATTRIBUTION.csv, log và nguồn nhãn để tái lập. Không commit work/, models/, trọng số hoặc thông tin đăng nhập.

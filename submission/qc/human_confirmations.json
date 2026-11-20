@@ -42,7 +42,7 @@
     "CAL-02",
     "CAL-03"
   ],
-  "final_release_decision": "Rework",
+  "final_release_decision": "Release detection",
   "calibration_pending": [],
   "cvat_version": "2.74.1",
   "cvat_version_source": "GET http://localhost:8080/api/server/about",
@@ -54,5 +54,22 @@
       "previous_minutes": null,
       "update": "User later supplied 15 minutes for the four Gold images; self-reported after completion, not stopwatch-verified"
     }
-  ]
+  ],
+  "qc_round2_confirmation": {
+    "date": "2026-11-20",
+    "changed_image_checked": "img_003.jpg",
+    "result": "khong",
+    "unchanged_images_carried_forward": [
+      "img_006.jpg",
+      "img_014.jpg",
+      "img_031.jpg",
+      "img_035.jpg"
+    ],
+    "sample_images": 5,
+    "sample_objects": 108,
+    "confirmed_errors": 0,
+    "source": "User explicitly reviewed new img003 preview, confirmed clean and approved detection Release conditional on passing checks"
+  },
+  "decision_date": "2026-11-20",
+  "release_checks_passed": true
 }

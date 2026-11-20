@@ -1,0 +1,6 @@
+image,object_id,error_type,reviewer,note
+img_003.jpg,,khong,NgoThiMinhQuang,Học viên xem ảnh QC mới và xác nhận sạch ngày20/11/2026; đồng ý Release detection nếu các kiểm tra đạt.
+img_006.jpg,,khong,NgoThiMinhQuang,"Kế thừa xác nhận kiểm sạch ngày19/11/2026; box/lớp ảnh này không đổi trong export20/11, chỉ ID thay đổi khi build lại."
+img_014.jpg,,khong,NgoThiMinhQuang,"Kế thừa xác nhận kiểm sạch ngày19/11/2026; box/lớp ảnh này không đổi trong export20/11, chỉ ID thay đổi khi build lại."
+img_031.jpg,,khong,NgoThiMinhQuang,"Kế thừa xác nhận kiểm sạch ngày19/11/2026; box/lớp ảnh này không đổi trong export20/11, chỉ ID thay đổi khi build lại."
+img_035.jpg,,khong,NgoThiMinhQuang,"Kế thừa xác nhận kiểm sạch ngày19/11/2026; box/lớp ảnh này không đổi trong export20/11, chỉ ID thay đổi khi build lại."

@@ -1,6 +1,6 @@
 # Báo cáo Day 08 — 2A202603146 - Ngo Thi Minh Quang
 
-> Tôi thực hiện bài lab trên Windows, sử dụng CPU và CVAT Docker 2.74.1. Báo cáo tổng hợp quá trình chạy model, review nhãn, tạo mask và kiểm tra chất lượng. Sau QC, tôi chọn Rework để sửa các lỗi còn lại trước khi phát hành dữ liệu.
+> Tôi thực hiện bài lab trên Windows, sử dụng CPU và CVAT Docker 2.74.1. Báo cáo tổng hợp quá trình chạy model, review nhãn, tạo mask và kiểm tra chất lượng. Sau QC, tôi sửa các lỗi đã phát hiện trên CVAT, kiểm lại bản export và chọn Release bộ nhãn detection ngày 20/11/2026.
 
 ## 1. Model và recipe (Part 2–3)
 
@@ -87,7 +87,7 @@ Gold: **4 ảnh/51 đối tượng**, TP42, FP50, FN9. Precision máy=42/92=**45
 
 Sau vòng sửa có hỗ trợ đối chiếu đáp án, tôi xử lý được **12/12 bẫy = 100%**. Cả bốn nhóm loose, extra, wrong_class và missing đều đạt 3/3.
 
-Ba trường hợp tôi sửa sau khi đối chiếu là: xe máy bên phải img_003 bị gán bicycle; khung person thừa trên vùng trời ở img_018; và người áo khoác xám bị bỏ sót ở img_021. Tôi lưu thay đổi trên CVAT rồi export lại. Tuy đã xử lý đủ các bẫy, QC mẫu vẫn phát hiện lỗi ở img_003.
+Ba trường hợp tôi sửa sau khi đối chiếu là: xe máy bên phải img_003 bị gán bicycle; khung person thừa trên vùng trời ở img_018; và người áo khoác xám bị bỏ sót ở img_021. Tôi lưu thay đổi trên CVAT rồi export lại. Tuy đã xử lý đủ các bẫy, QC mẫu trước lượt sửa cuối vẫn phát hiện lỗi ở img_003. Các lỗi này được xử lý trong lượt sửa QC ở mục 7.
 
 Qua kết quả này, tôi nhận thấy cần đánh giá riêng khả năng phát hiện bẫy và chất lượng nhãn sau review. Tỷ lệ accepted cao chưa đủ để kết luận bộ nhãn đã sạch; tôi vẫn cần rà lại nhãn sai, khung trùng và các đối tượng bị bỏ sót.
 
@@ -109,7 +109,7 @@ Tôi lưu **3 ảnh kết quả cho ba đối tượng** tại submission/masks/
 
 Theo guideline 4.2, mask cần bám phần nhìn thấy của đối tượng, loại bóng đổ và tách vùng giữa các vật chạm nhau. Kính thuộc xe, còn lỗ lớn cần được loại khỏi mask. Với img_013, vùng cần chú ý là ranh giới giữa người lái và xe. Ở img_003, mask còn tô vào vùng người và hàng hóa; phần này cần được rà lại theo CAL-02. Hai polygon ở ảnh này chưa đủ để kết luận mask sai, vì một đối tượng bị che có thể tạo nhiều vùng rời nhau. Với img_017, tôi cần kiểm kỹ ranh giới tại chỗ xe bị phương tiện phía trước che khuất.
 
-Trong kế hoạch Rework, tôi sẽ rà lại phần người và hàng hóa trong từng mask theo CAL-02. Tôi chưa đo sai số đường biên hoặc IoU của mask so với một bộ segmentation Gold, nên phần đánh giá hiện tại chủ yếu dựa trên kiểm tra trực quan.
+Đối với các mask SAM thực nghiệm, tôi vẫn cần rà kỹ phần người và hàng hóa theo CAL-02 khi phát triển bộ segmentation. Quyết định Release ở mục 7 áp dụng cho bộ nhãn detection. Tôi chưa đo sai số đường biên hoặc IoU của mask so với một bộ segmentation Gold, nên phần đánh giá hiện tại chủ yếu dựa trên kiểm tra trực quan.
 
 ## 6. Calibration (Part 6)
 
@@ -119,35 +119,51 @@ Trong kế hoạch Rework, tôi sẽ rà lại phần người và hàng hóa tr
 | CAL-02 | cau_hoi_mo | Chấp nhận B theo đề xuất kỹ thuật | Mask gồm hàng nằm trong giỏ/thùng cố định, loại phần hàng nhô ra và người; box giữ v1.0. Tôi chọn phương án B sau khi xem đề xuất kỹ thuật. |
 | CAL-03 | bay_lot | Đã chốt | Motorbike cho xe máy hai bánh; kiểm lớp, người/xe, khung trùng theo checklist; conf không thay việc kiểm. |
 
-Tôi chốt **3 quyết định calibration**, gồm một ca loi_may, một ca cau_hoi_mo và một ca bay_lot. Sau khi xem đề xuất kỹ thuật, tôi chọn phương án B cho CAL-02. Các quyết định được lưu trong calibration_decisions.csv và guideline_v1.1_calibrated.md; taxonomy được cập nhật lên v1.1, giữ nguyên các ngưỡng trong rules. Tôi sẽ kiểm lại tính nhất quán của nhãn và mask theo guideline mới trong lượt Rework.
+Tôi chốt **3 quyết định calibration**, gồm một ca loi_may, một ca cau_hoi_mo và một ca bay_lot. Sau khi xem đề xuất kỹ thuật, tôi chọn phương án B cho CAL-02. Các quyết định được lưu trong calibration_decisions.csv và guideline_v1.1_calibrated.md; taxonomy được cập nhật lên v1.1, giữ nguyên các ngưỡng trong rules. Tôi đã áp dụng guideline cho lượt sửa QC của bộ detection. Phần mask được lưu như kết quả thực nghiệm riêng, chưa có đo lường segmentation Gold.
 
 CAL-01 và CAL-03 xử lý các lỗi áp dụng quy tắc đã có, còn CAL-02 bổ sung phạm vi hàng hóa trong mask xe. Tôi sử dụng img_003, img_004, img_013 và img_031 làm ví dụ. Những thay đổi nhãn sau QC sẽ được sửa trên CVAT và xuất thành qc_fixed.json để giữ riêng với dữ liệu review trước đó.
 
-## 7. QC, release candidate và quyết định
+## 7. QC, sửa lỗi và quyết định Release
 
-### Kết quả kiểm tra mẫu
+### Vòng QC trước sửa
 
-Tôi kiểm mẫu **5/24 ảnh** với seed 42, gồm 0 ca can_review và 5 ảnh ngẫu nhiên: img_003, img_006, img_014, img_031, img_035. Mẫu có **110 đối tượng**. Tôi xác nhận img_003 có ba lỗi dưới đây; bốn ảnh còn lại không ghi nhận lỗi. Phiếu kiểm được lưu tại qc_review.csv, ảnh có ID tại qc/previews/.
+Mẫu seed 42 gồm 5/24 ảnh, 0 ca can_review và 5 ảnh ngẫu nhiên: img_003, img_006, img_014, img_031, img_035. Vòng đầu có110 đối tượng, tôi xác nhận3 lỗi ở img_003, còn bốn ảnh không ghi nhận lỗi. Tỷ lệ lỗi khi đó là3/110=2.7% theo đối tượng và1/5=20.0% theo ảnh, nên tôi chọn Rework.
 
-| Ảnh | ID trong release/QC | Lỗi xác nhận | Trạng thái sửa |
-|---|---|---|---|
-| img_003 | 18 (trùng1) | thua: hai person cho cùng người | Chưa có export QC sửa |
-| img_003 | 7 | sai_vi_tri_kich_thuoc: khung xe cắt mái | Chưa có export QC sửa |
-| img_003 | 3 | sai_lop: three_wheeler ở mép phải | Chưa có export QC sửa |
+| Lỗi ở img_003 | Cách sửa trên CVAT | Kết quả đối chiếu export |
+|---|---|---|
+| Khung person trùng cùng người | Xóa khung person nhỏ bị trùng | Khung cũ tại (331.04,203.09,58.5,82.8) không còn trong export |
+| Khung xe ba bánh cắt mái | Mở rộng khung bao đủ mái, thân và bánh nhìn thấy | Box mới (239.7,101.1,542.7,522.88), dạngx,y,w,h |
+| Nhãn three_wheeler sai ở mép phải | Xóa khung sai, giữ khung motorbike đúng hiện có | Khung three_wheeler tại (968.86,169.58,55.14,252.08) không còn |
 
-ID trên là ID ảnh preview/release hiện tại, không bảo đảm trùng ID sidebar CVAT.
+Tôi cũng chỉnh lại box người đứng cạnh xe. Chỉ img_003 thay đổi so với export vòng hai. Tôi lưu COCO export mới và tách nguyên các annotation của ảnh này thành labels/qc_fixed.json:1 ảnh,22 annotation. Nhãn batch_reviewed.json của Part4 và các log review trước đó được giữ nguyên. Bằng chứng vòng QC cũ được lưu tại qc/qc_before_fixed_20261120/.
 
-**Tỷ lệ lỗi theo đối tượng là 3/110 = 2.7%; tỷ lệ ảnh có lỗi là 1/5 = 20.0%.** Mỗi loại lỗi xuất hiện một lần trong mẫu. Sau khi chốt CAL-02, tôi sử dụng qc_report.py với --guideline-gap 0. Báo cáo tự động đề xuất **REWORK** do tỷ lệ ảnh có lỗi vượt ngưỡng 2%. Tôi chọn Rework để xử lý các lỗi này trước khi phát hành.
+### Kiểm sau sửa
 
-Tôi vừa là người review vừa là người QC nên kết quả kiểm chưa độc lập. Với mẫu chỉ có 5 ảnh, cận trên 95% theo Wilson của tỷ lệ ảnh lỗi thật khoảng **62%**. Vì vậy, kết quả mẫu này chưa chứng minh bộ nhãn đạt ngưỡng lỗi 2%, dù tỷ lệ xử lý bẫy ở vòng sửa đạt 100%.
+Sau khi build lại, bộ detection có **24 ảnh,584 annotation**, giảm2 annotation so với bản trước. Mẫu QC cùng seed42 vẫn gồm5 ảnh, nay có **108 đối tượng**. Tôi xem lại ảnh QC mới của img_003 và xác nhận không còn lỗi đã nêu. Bốn ảnh còn lại giữ xác nhận sạch từ vòng trước vì box và lớp của chúng không thay đổi; đây không phải một lượt kiểm độc lập hoàn toàn mới.
 
-### Release candidate
+Kết quả hiện tại: **0/108 đối tượng lỗi=0.0%; 0/5 ảnh có lỗi=0.0%**. Phiếu kiểm ở qc/qc_review.csv, báo cáo script ở qc/qc_report_auto.md. Script gợi ý **RELEASE**. Các kiểm tra JSON, tên lớp, box, số ảnh và cấu trúc bài nộp đều hoàn tất thành công; còn15 cảnh báo hình học cần lưu ý khi sử dụng dữ liệu.
 
-Tôi xây dựng bộ ứng viên gồm release/final_det.coco.json, release_summary.csv và release_manifest.json. Bộ này có **24 ảnh batch, 586 annotation**, trong đó có 585 đối tượng và 1 ignore_region. Số lượng theo lớp: person 282, motorbike 209, car 53, three_wheeler 24, bicycle 9, truck 5, bus 3 và ignore_region 1. Manifest và bảng tổng hợp khớp với nhãn vòng hai. Sau khi chốt guideline, phiên bản taxonomy trong bộ ứng viên được đồng bộ thành v1.1. Các lỗi QC chưa được sửa nên tôi chưa phát hành bộ dữ liệu này.
+Tôi vừa là người review vừa là người QC nên kết quả chưa độc lập. Với mẫu5 ảnh, cận trên95% Wilson của tỷ lệ ảnh lỗi thật vẫn khoảng**43%**. Vì vậy, không ghi nhận lỗi trong mẫu không chứng minh toàn bộ lô có tỷ lệ ảnh lỗi dưới2%. Kết quả bẫy100% cũng không thay cho QC.
 
-Bộ dữ liệu hợp lệ về cấu trúc và còn 15 cảnh báo hình học cần rà theo guideline. Tôi giữ bộ release ở trạng thái ứng viên và lưu riêng các lỗi QC để theo dõi việc sửa.
+### Bộ detection được chốt
 
-**Tôi chọn Rework, ngày 19/11/2026.** Mẫu QC có 3 lỗi trên 1/5 ảnh, tương đương 20%, vượt ngưỡng 2%. Tôi cần sửa các khung ở img_003 và rà mask theo CAL-02. Kế hoạch được lưu tại qc/rework_plan.md; sau khi sửa trên CVAT, tôi sẽ export qc_fixed.json và xây lại bộ ứng viên.
+Tôi cập nhật release/final_det.coco.json, release_summary.csv và release_manifest.json theo taxonomyv1.1. Manifest ghi rõ img_003 được thay bằng qc_fixed.json. Đầu ra khớp export mới theo tên ảnh, lớp và box:
+
+| Lớp | Số annotation |
+|---|---:|
+| person | 281 |
+| motorbike | 209 |
+| car | 53 |
+| three_wheeler | 23 |
+| bicycle | 9 |
+| truck | 5 |
+| bus | 3 |
+| ignore_region | 1 |
+| Tổng | 584 |
+
+Bộ này gồm583 đối tượng và1 vùng ignore_region. Gold, batch review gốc, đáp án bẫy, log model và ba mask dùng điểm tôi chọn không bị thay đổi. Phạm vi Release là nhãn detection; không coi đây là chứng nhận chất lượng cho các mask SAM thực nghiệm.
+
+**Tôi chọn Release bộ nhãn detection, ngày20/11/2026**, sau khi xem ảnh sửa và các kiểm tra đạt. Lý do: ba lỗi QC đã được xử lý, mẫu hiện tại không ghi nhận lỗi, đủ3ca calibration và bộ dữ liệu hợp lệ. Tôi giữ các giới hạn của mẫu nhỏ trong báo cáo và lưu riêng dữ liệu trước/sau sửa để truy vết.
 
 ## 8. Ghi chú cá nhân và môi trường thực nghiệm
 
@@ -157,4 +173,4 @@ Tôi thực hiện các thí nghiệm trên CPU với Python 3.12.10. Phiên b�
 
 Log r01–r06, kết quả quét ngưỡng, export từng vòng và lệnh SAM được giữ để đối chiếu. Bản báo cáo trước khi chỉnh sửa được lưu trong evidence/REPORT_history_before_submission_cleanup.md.
 
-Qua bài lab, tôi thấy pre-label giúp tạo bộ nhãn ban đầu nhưng vẫn cần kiểm từng đối tượng và QC sau review. Trong lượt Rework tiếp theo, tôi sẽ ưu tiên các khung trùng, nhãn lớp của phương tiện và ranh giới người–xe trong mask.
+Qua bài lab, tôi thấy pre-label giúp tạo bộ nhãn ban đầu nhưng vẫn cần kiểm từng đối tượng và QC sau review. Từ các lỗi đã sửa, tôi ưu tiên kiểm khung trùng, nhãn lớp của phương tiện và ranh giới người–xe trong các lần gán nhãn tiếp theo.

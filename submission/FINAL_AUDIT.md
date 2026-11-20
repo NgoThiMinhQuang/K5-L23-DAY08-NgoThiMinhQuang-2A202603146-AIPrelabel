@@ -1,8 +1,8 @@
-# Đối chiếu rubric — cập nhật sau chốt CAL-02 và Rework
+# Đối chiếu rubric — cập nhật20/11/2026
 
-Ngày19/11/2026. Đây là kiểm kê bằng chứng, không phải điểm giảng viên chấm. Kết quả bẫy hiện tại12/12=100% ở vòng sửa có hỗ trợ. Gold, nhãn nguồn, mask và log gốc được giữ nguyên.
+Bảng kiểm kê bằng chứng, không phải điểm giảng viên chấm. Kết quả bẫy Part4 là12/12=100% ở vòng sửa có đối chiếu đáp án. Nhãn trướcQC và lịch sử được giữ nguyên.
 
-| Part | Yêu cầu rubric | Trạng thái | Bằng chứng | File đã hoàn thiện | Việc còn cần học viên thực hiện |
+| Part | Yêu cầu rubric | Trạng thái | Bằng chứng | File đã hoàn thiện | Việc còn cần thực hiện/lưu ý |
 |---|---|---|---|---|---|
 | 0 | Cài đặt/tái lập/Git (một phần hạng mục8đ) | Kỹ thuật có bằng chứng; Git/nộp chưa chốt | Environment exit0; public repo đã xác minh; L2/CVAT2.74.1 | README.md; STUDENT.md; evidence/check_env_original.txt | Kiểm tên repo và lịch sử commit theo yêu cầu lớp; duyệt trước push |
 | 1 | Gold thủ công và contract10đ | Nhãn hợp lệ; có thời lượng tự báo cáo15phút | 4ảnh/51annotation; time_log15phút do học viên cung cấp sau khi hoàn thành, không có log bấm giờ | labels/gold_manual.json; time_log.csv; REPORT mục2/8 | Giữ đúng nguồn tự báo cáo; không coi là bằng chứng đã bấm giờ tại thời điểm làm. |
@@ -11,25 +11,18 @@ Ngày19/11/2026. Đây là kiểm kê bằng chứng, không phải điểm gi�
 | 4 | Review, bẫy, AI error profile28đ | Đủ sản phẩm vòng sửa; không biến thành phép đo độc lập | 24ảnh/586annotation;120phút;12/12bẫy vòng sửa có hỗ trợ | labels/batch_reviewed.json; qc/review_stats.*; qc/part4_round*/; REPORT mục2–4 | Không có thao tác kỹ thuật cần chạy lại; giữ nguồn gốc kết quả |
 | 5 | >=3ảnhmask; phân tích người/hàng/biên8đ | Đủ3mask từ điểm học viên; thực hành đã xác nhận | SAM2.1CPU; điểm4/6/4; exit0; ảnh đọc được | masks/3JPG hiện tại; masks/logs/; REPORT mục5 | Xác nhận nhận xét mask chi tiết và tính nhất quán với CAL-02 |
 | 6a | Calibration>=3quyếtđịnh và guideline10đ | Đủ3quyếtđịnh đã chốt và guidelinev1.1 | CAL-01/CAL-03 xác nhận trực tiếp; CAL-02B chấp nhận đề xuất kỹ thuật | qc/calibration_decisions.csv; calibration_candidates.*; guidelines/guideline_v1.1_calibrated.md | Kiểm mask/nhãn khi áp dụngB, sửa thật nếu cần. |
-| 6b | QC, release và báo cáo8đ | Đủ báo cáoQC, quyết địnhRework; chưaRelease | 3/110đối tượnglỗi,1/5ảnhlỗi;scriptREWORK;học viên chấp nhận | qc/qc_review.csv; qc_report_auto.md; release/; REPORT mục7 | SửaCVAT/exportqc_fixed nếu muốn cải thiện chất lượng;chưapush. |
+| 6b | QC, release và báo cáo8đ | Đã sửaQC, kiểm ảnh mới và chốtRelease detection | 24ảnh/584annotation; mẫu5ảnh/108vật,0lỗi; học viên xác nhận img003sạch,4ảnhkhácnhãnkhôngđổi | labels/qc_fixed.json; qc/qc_fixed_round2/; qc/qc_report_auto.md; release/; REPORT mục7 | Đã đồng ý Release có điều kiện, các kiểm tra đã đạt; vẫn lưu giới hạn mẫu nhỏ. |
 
-## Kiểm tra cuối
+## Kết quả sau sửaQC
 
-Validation hợp lệ. Calibration đã đủ3dòng cóloi_may/cau_hoi_mo/bay_lot, guidelinev1.1 và taxonomyversionđã đồng bộ; ruleskhông đổi. Releasecandidate24ảnh/586annotation cógeometry/lớp/IDkhôngđổi, manifestv1.1khớp. ScriptQC --guideline-gap0 gợiýREWORK do ảnhlỗi20%>2%; học viên chấp nhận đề xuất, chưaphêduyệtRelease.
+Chỉimg_003 thay đổi trong export mới. Đã tách1ảnh/22annotation nguyên bản thànhqc_fixed.json, không tạo nhãn. Release24ảnh/584annotation khớp export đủ24ảnh theo ảnh/lớp/box; manifestghiđúngimg_003đượcthay. Gold/nhãnbatchtrướcsửa/bẫy/mask/loggiữnguyên.
 
-Học viên bổ sung thời lượngGold15phút/4ảnh=3,75phút/ảnh. Đã cập nhật time_log với nguồn tự báo cáo sau khi hoàn thành, không có log bấm giờ. Kiểm tra cấu trúc có thể đủ dữ liệu nhưng không chứng minh yêu cầu bấm giờ tại thời điểm thực hiện đã được đáp ứng.
+Học viên xem ảnhQCmới và xác nhậnimg_003sạch, đồngýRelease detection nếukiểmtrađạt. BốnảnhkhácgiữQCtrướcvìgeometry/lớpkhôngđổi. QC0/108đốitượnglỗi và0/5ảnhlỗi;scriptgợiýRELEASE. Đây không phảiQCđộclậpmới, mẫu5ảnhnhỏ, Wilson95%cậntrên43%; không khẳngđịnhtoànbộlôlỗithậtdưới2%.
 
-## Việc còn lại
+Validation vàcheck_submission.py:0lỗi/0cảnhbáo ởkiểmtracấutrúcbàinộp; validate_labels còn15cảnhbáohìnhhọcđãlưulog. Gold15phútdohọcviêncungcấpsaukhihoànthành,khôngcólogbấmgiờ,khôngtựcoilàbằngchứngđođươngthời.
 
-Kế hoạch sửa thật: qc/rework_plan.md. Có thể báo cáo quyết địnhRework trung thực theo rubric; muốnRelease cần sửaQC, kiểmmask theoBvàkiểmlại. Phần nhận xét cá nhân/mask cần học viên đọc và chịu trách nhiệm, không tự tạo thao tác đã thực hiện.
+## Phạm vi quyết định
 
-Repo đã được xác minhpublic. TênrepođặtHoTentrướcMSHV, khác mẫuSUBMISSION; cần kiểmquyướclớp trước nộp. Không tự đổi tênremote. Filecấm/trọngsố/tokenkhông đưa vàoGit. Các exporttrùng/demoAIkhôngtínhlàthànhtíchhọcviên, giữmáy nhưngignore. Commitchuẩnbịcục bộđượctạohiệntại,khôngbackdate. Chưapush/chưapháthànhcuối.
+**Release nhãn detection, ngày20/11/2026.** Không tựtạorelease/tagGitHub,khôngchứngnhậnmasksegmentationhoànhảo. BằngchứngvòngQCcũởqc/qc_before_fixed_20261120;vòngmớiởqc/qc_fixed_round2;quyếtđịnhvàkiểmtraởqc/release_verification.json.
 
-## Lệnh sau khi có bản sửa QC thực tế
-
-```powershell
-.\.venv\Scripts\python.exe scripts/build_release.py
-.\.venv\Scripts\python.exe scripts/qc_sample.py --n 5 --seed 42
-```
-
-Sao lưu phiếuQCtrướckhidùng--force. Chỉ khi đã kiểm lại thật mới cập nhậtphiếuQCvàchạyqc_report.py --guideline-gap0. Cuối cùngcheck_submission.py; giữ ghi chú nguồn thời lượngGold tự báo cáo.
+Repođãpublic. CầnkiểmquyướctênrepocủalớpvìtênhiệntạiđặtHoTentrướcMSHV,khácmẫumặcđịnhSUBMISSION. Cáccommitchuẩnbịkhôngbackdate;khôngtuyênbốlịchsửđượctạotrongquátrìnhlàmtừngPart. Giữnguồn/thôngtincá nhânđúngthựctế.

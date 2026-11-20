@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "parts": [
     {
       "part": 0,
@@ -39,7 +39,7 @@
   ],
   "release": {
     "images": 24,
-    "annotations": 586,
+    "annotations": 584,
     "per_class": {
       "person": 282,
       "three_wheeler": 24,
@@ -55,18 +55,23 @@
     "summary_consistent": true,
     "validation_exit": 0,
     "is_release_candidate_only": true,
-    "taxonomy_version": "v1.1"
+    "taxonomy_version": "v1.1",
+    "approved_final": true,
+    "scope": "detection only",
+    "images_replaced_by_qc_fix": [
+      "img_003.jpg"
+    ]
   },
   "qc": {
     "images": 5,
-    "objects": 110,
+    "objects": 108,
     "unchecked": [],
     "human_checked": 5,
     "error_rate": null,
-    "final_decision": "Rework",
-    "confirmed_errors": 3,
-    "error_rate_objects": 0.02727272727272727,
-    "error_rate_images": 0.2
+    "final_decision": "Release detection",
+    "confirmed_errors": 0,
+    "error_rate_objects": 0,
+    "error_rate_images": 0
   },
   "calibration": {
     "approved_rows": 3,
@@ -229,19 +234,24 @@
     "Part4 review statistics",
     "Part5 SAM inference"
   ],
-  "blocked_on": [
-    "Actual rework if pursuing Release"
-  ],
+  "blocked_on": [],
   "protected_inputs_unchanged": true,
   "latest_audit": "submission/FINAL_AUDIT.md",
-  "latest_decision": "Rework",
+  "latest_decision": "Release detection",
   "gold_duration_status": "User-reported after completion; no contemporaneous timing log",
   "pending": [
-    "Actual rework if pursuing Release",
-    "Review personal/mask observations",
-    "Repository naming convention"
+    "Review repository naming convention before LMS submission"
   ],
   "formal_submission_requirement_missing": [],
   "gold_manual_minutes": 15,
-  "rubric_timing_evidence_limitation": "Duration was supplied after completion, not supported by a stopwatch log"
+  "rubric_timing_evidence_limitation": "Duration was supplied after completion, not supported by a stopwatch log",
+  "qc_current": {
+    "sample_images": 5,
+    "sample_objects": 108,
+    "error_objects": 0,
+    "error_images": 0,
+    "user_confirmed_changed_image": true,
+    "unchanged_images_carried_forward": 4,
+    "independent": false
+  }
 }

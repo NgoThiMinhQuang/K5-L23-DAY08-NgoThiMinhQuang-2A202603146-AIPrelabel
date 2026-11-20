@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "scripts": {
     "validation_all.txt": {
       "exit_code": 0,
@@ -12,15 +12,27 @@
     "submission_check.txt": {
       "exit_code": 0,
       "errors": []
+    },
+    "qc_fixed_validation.txt": {
+      "exit_code": 0,
+      "errors": []
+    },
+    "final_detection_validation.txt": {
+      "exit_code": 0,
+      "errors": []
     }
   },
   "format_files_checked": 37,
   "release": {
     "images": 24,
-    "annotations": 586,
+    "annotations": 584,
     "consistent": true,
-    "approved_final": false,
-    "taxonomy_version": "v1.1"
+    "approved_final": true,
+    "taxonomy_version": "v1.1",
+    "scope": "detection only",
+    "images_replaced_by_qc_fix": [
+      "img_003.jpg"
+    ]
   },
   "banned_commit_files": [],
   "secret_pattern_paths": [],
@@ -38,15 +50,22 @@
     "data/split.csv": "ce3de07331d3cb5854639ce45f7faea3f27b8ac0e26a0c81c05a094efb17bb9f"
   },
   "pending": [
-    "Actual rework if pursuing Release",
-    "Review personal/mask observations",
-    "Repository naming convention"
+    "Review repository naming convention before LMS submission"
   ],
   "public_repository_verified": true,
   "repository_name_matches_default_submission_pattern": false,
-  "latest_decision": "Rework",
+  "latest_decision": "Release detection",
   "gold_duration_status": "User-reported after completion; no contemporaneous timing log",
   "formal_submission_requirement_missing": [],
   "gold_manual_minutes": 15,
-  "rubric_timing_evidence_limitation": "Duration was supplied after completion, not supported by a stopwatch log"
+  "rubric_timing_evidence_limitation": "Duration was supplied after completion, not supported by a stopwatch log",
+  "qc_current": {
+    "sample_images": 5,
+    "sample_objects": 108,
+    "error_objects": 0,
+    "error_images": 0,
+    "user_confirmed_changed_image": true,
+    "unchanged_images_carried_forward": 4,
+    "independent": false
+  }
 }

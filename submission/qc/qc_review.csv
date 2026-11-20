@@ -1,8 +1,6 @@
 image,object_id,error_type,reviewer,note
-img_003.jpg,18,thua,NgoThiMinhQuang,Học viên xác nhận trong chat 19/11/2026: person #18 trùng person #1; ID theo release/QC hiện tại.
-img_003.jpg,7,sai_vi_tri_kich_thuoc,NgoThiMinhQuang,Học viên xác nhận: khung xe ba bánh cắt mất phần trên mái.
-img_003.jpg,3,sai_lop,NgoThiMinhQuang,"Học viên xác nhận: three_wheeler ở mép phải sai lớp; cần sửa trên CVAT, chưa tự đổi annotation."
-img_006.jpg,,khong,NgoThiMinhQuang,Học viên xác nhận đã kiểm ảnh QC và không có lỗi trong chat ngày 19/11/2026.
-img_014.jpg,,khong,NgoThiMinhQuang,Học viên xác nhận đã kiểm ảnh QC và không có lỗi trong chat ngày 19/11/2026.
-img_031.jpg,,khong,NgoThiMinhQuang,Học viên xác nhận đã kiểm ảnh QC và không có lỗi trong chat ngày 19/11/2026.
-img_035.jpg,,khong,NgoThiMinhQuang,Học viên xác nhận đã kiểm ảnh QC và không có lỗi trong chat ngày 19/11/2026.
+img_003.jpg,,khong,NgoThiMinhQuang,Học viên xem ảnh QC mới và xác nhận sạch ngày20/11/2026; đồng ý Release detection nếu các kiểm tra đạt.
+img_006.jpg,,khong,NgoThiMinhQuang,"Kế thừa xác nhận kiểm sạch ngày19/11/2026; box/lớp ảnh này không đổi trong export20/11, chỉ ID thay đổi khi build lại."
+img_014.jpg,,khong,NgoThiMinhQuang,"Kế thừa xác nhận kiểm sạch ngày19/11/2026; box/lớp ảnh này không đổi trong export20/11, chỉ ID thay đổi khi build lại."
+img_031.jpg,,khong,NgoThiMinhQuang,"Kế thừa xác nhận kiểm sạch ngày19/11/2026; box/lớp ảnh này không đổi trong export20/11, chỉ ID thay đổi khi build lại."
+img_035.jpg,,khong,NgoThiMinhQuang,"Kế thừa xác nhận kiểm sạch ngày19/11/2026; box/lớp ảnh này không đổi trong export20/11, chỉ ID thay đổi khi build lại."

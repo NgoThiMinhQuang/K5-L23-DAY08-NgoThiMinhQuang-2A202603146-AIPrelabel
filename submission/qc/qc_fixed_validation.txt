@@ -1,0 +1,3 @@
+[submission\labels\qc_fixed.json] 1 ảnh, 22 đối tượng: OK
+
+Exit code: 0
