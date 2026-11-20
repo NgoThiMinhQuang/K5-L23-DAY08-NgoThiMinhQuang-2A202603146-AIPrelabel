@@ -1,6 +1,6 @@
 # Part 5 — SAM 2.1, điểm do học viên cung cấp
 
-Trạng thái: đã chạy model bằng tọa độ học viên gửi trong chat; học viên chưa xác nhận kiểm tra chất lượng. Không đánh dấu CP5 hoàn thành từ số lượng file. Codex chỉ thực thi đúng tọa độ, thêm --device cpu; không tự chọn điểm trong lượt này.
+Trạng thái: đã có ba kết quả SAM2.1 từ tọa độ học viên chọn; học viên đã xác nhận hoàn thành thực hành Part5. Phân tích được ghi trong REPORT mục5. Đây là mask thực nghiệm; quyết định Release ngày20/11/2026 chỉ áp dụng cho nhãn detection, không phải chứng nhận sai số biên của segmentation.
 
 Model models/sam2.1_b.pt nạp thành công (161935802 byte). Script sam2_points.py không có giao diện click: nhận tọa độ pixel ảnh gốc qua --pos/--neg.
 
@@ -12,13 +12,13 @@ Model models/sam2.1_b.pt nạp thành công (161935802 byte). Script sam2_points
 
 ## Đầu ra và log
 
-Mỗi lệnh tạo một ảnh JPG overlay cho một vật; mask có thể có nhiều mảnh polygon (img_003 có 2 mảnh), không có yêu cầu mỗi ảnh chỉ đúng 1 polygon. File không phải mask nhị phân và script không lưu JSON/polygon hay tự cập nhật model_log.csv/work/runs.csv. Log chạy thật, lệnh và tọa độ mỗi vật đã được lưu trong logs/*.txt và logs/*.json. Mỗi exit code đều bằng 0; chất lượng vẫn chờ học viên.
+Mỗi lệnh tạo một ảnh JPG overlay cho một vật; mask có thể có nhiều mảnh polygon (img_003 có 2 mảnh), không có yêu cầu mỗi ảnh chỉ đúng 1 polygon. File không phải mask nhị phân và script không lưu JSON/polygon hay tự cập nhật model_log.csv/work/runs.csv. Log chạy thật, lệnh và tọa độ mỗi vật đã được lưu trong logs/*.txt và logs/*.json. Mỗi exit code đều bằng0. Học viên đã xem kết quả và xác nhận hoàn thành thực hành; bài chưa có bộ segmentationGold để đo IoU hoặc sai số biên.
 
 ## Yêu cầu bài
 
 GUIDE Part 5: chọn 3 vật khó, tạo ít nhất 3 ảnh masks/*.jpg; ghi SAM, số click và nhận xét vào REPORT mục 5. Rubric Mask SAM 8 điểm: 3 điểm cho >=3 ảnh và phiên bản/số click; 3 điểm phân tích người lái/hàng hóa đối chiếu guideline 4.2; 2 điểm quy tắc/lỗi rút ra. Không cần segmentation 8 ảnh hoặc COCO mask trong phần bắt buộc này. SAM 2.1 đã có dòng r04 trong model_log.csv từ Part 2; script hiện tại không tự tạo run_id nên không thêm log giả cho Part 5.
 
-## Kiểm tra bằng mắt trước khi chốt
+## Tiêu chí kiểm tra mask
 
 Học viên mở từng JPG, kiểm vùng tô có đủ phần xe nhìn thấy, có ăn vào người/hàng hóa/nền, có gồm bóng đổ hoặc bỏ mất phần xe. Đối chiếu guideline 4.2: phần nhìn thấy, biên, lỗ lớn, bóng đổ, kính và tách vật chạm nhau. Vấn đề chưa có quy tắc rõ ghi thành câu hỏi calibration; không tự chốt thay.
 

@@ -13,4 +13,4 @@
 [submission\release\final_det.coco.json] ... và 3 cảnh báo nữa
 [submission\release\final_det.coco.json] 24 ảnh, 584 đối tượng: OK
 
-Exit code: 0
+Exit code:0

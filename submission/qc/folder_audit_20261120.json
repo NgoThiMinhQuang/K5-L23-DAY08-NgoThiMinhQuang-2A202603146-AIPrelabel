@@ -1,0 +1,150 @@
+{
+  "tracked_files": 218,
+  "counts": {
+    "markdown": 38,
+    "json_notebooks": 37,
+    "csv": 17,
+    "coco": 12,
+    "python": 24,
+    "images": 78
+  },
+  "issues": [],
+  "broken_local_markdown_links": [],
+  "release_overlay_consistent": true,
+  "release_counts": {
+    "person": 281,
+    "bicycle": 9,
+    "motorbike": 209,
+    "three_wheeler": 23,
+    "car": 53,
+    "truck": 5,
+    "bus": 3,
+    "ignore_region": 1
+  },
+  "qc_sample_objects": 108,
+  "date": "2026-11-20",
+  "regression_tests": {
+    "command": ".venv/Scripts/python.exe -B -X utf8 -m unittest discover -s tests -v",
+    "tests_run": 12,
+    "seconds": 50.386,
+    "result": "OK",
+    "scope": "Temporary test fixture directories; source annotations and models not rerun"
+  },
+  "repairs": [
+    "part6_preflight.per_class corrected from586to584",
+    "part6_preflight current part statuses and effective-overlay source synchronized",
+    "initial input hashes explicitly labeled historical snapshot",
+    "mask README reflects user completion and detection-only Release",
+    "calibration overview regenerated from3approved decisions",
+    "submission/Git/rubric status synchronized with main"
+  ],
+  "warnings_not_auto_fixed": [
+    "15 small-box/geometry warnings from validator; require image/guideline judgment",
+    "repository name orders HoTen before MSHV, unlike default submission example",
+    "Gold duration supplied after completion, no stopwatch log",
+    "SAM masks are experimental, not certified by detection Release"
+  ],
+  "env_check": {
+    "exit_code": 0,
+    "cvat_http": 200,
+    "device": "CPU",
+    "optional_warnings": [
+      "No GPU",
+      "No HuggingFace login; only needed for optional SAM3"
+    ]
+  },
+  "post_repair_preflight_consistent": true,
+  "small_box_warnings": [
+    {
+      "image": "img_018.jpg",
+      "annotation_id": 190,
+      "class": "motorbike",
+      "height": 14.27
+    },
+    {
+      "image": "img_018.jpg",
+      "annotation_id": 194,
+      "class": "motorbike",
+      "height": 15.67
+    },
+    {
+      "image": "img_018.jpg",
+      "annotation_id": 203,
+      "class": "person",
+      "height": 17.4
+    },
+    {
+      "image": "img_018.jpg",
+      "annotation_id": 213,
+      "class": "person",
+      "height": 16.2
+    },
+    {
+      "image": "img_018.jpg",
+      "annotation_id": 216,
+      "class": "motorbike",
+      "height": 16.86
+    },
+    {
+      "image": "img_018.jpg",
+      "annotation_id": 223,
+      "class": "motorbike",
+      "height": 18.26
+    },
+    {
+      "image": "img_018.jpg",
+      "annotation_id": 228,
+      "class": "bicycle",
+      "height": 16.64
+    },
+    {
+      "image": "img_025.jpg",
+      "annotation_id": 357,
+      "class": "person",
+      "height": 18.19
+    },
+    {
+      "image": "img_027.jpg",
+      "annotation_id": 395,
+      "class": "car",
+      "height": 17.22
+    },
+    {
+      "image": "img_027.jpg",
+      "annotation_id": 406,
+      "class": "motorbike",
+      "height": 18.6
+    },
+    {
+      "image": "img_027.jpg",
+      "annotation_id": 408,
+      "class": "motorbike",
+      "height": 16.92
+    },
+    {
+      "image": "img_033.jpg",
+      "annotation_id": 506,
+      "class": "motorbike",
+      "height": 18.64
+    },
+    {
+      "image": "img_033.jpg",
+      "annotation_id": 510,
+      "class": "motorbike",
+      "height": 19.13
+    },
+    {
+      "image": "img_034.jpg",
+      "annotation_id": 527,
+      "class": "motorbike",
+      "height": 18.3
+    },
+    {
+      "image": "img_034.jpg",
+      "annotation_id": 546,
+      "class": "motorbike",
+      "height": 17.4
+    }
+  ],
+  "original_source_hashes_verified_after_tests": true
+}

@@ -1,11 +1,7 @@
-# Các commit chuẩn bị nộp
+# Lịch sử chuẩn bị Git
 
-Ba nhóm commit kỹ thuật tạo tại thời điểm hoàn thiện hồ sơ, dùng tác giả Git đã được cấu hình của học viên. Không backdate, không tạo lịch sử giả là đã commit lúc làm từng Part. Chưa push, chưa tag Release; còn xác nhận CAL-02, thời gian Gold và quyết định cuối.
+Các commit kỹ thuật được tạo khi đóng gói hồ sơ, không backdate. Sau khi học viên cho phép, nội dung đã được đẩy lên main; mốc dữ liệu Release detection là commit74d2958. Các bản rà soát sau đó tiếp tục giữ nguyên dữ liệu nhãn và bằng chứng.
 
-1. Gold, log model và kết quả quét ngưỡng đã có bằng chứng.
-2. Export batch, lịch sử review, bộ mask dùng điểm học viên và release candidate.
-3. QC đã xác nhận, calibration đang hoàn thiện, hồ sơ và bảng đối chiếu rubric.
+Các nhóm nội dung đã lưu: Gold/log model/ngưỡng; batch review và mask dùng điểm học viên; calibration/QC/báo cáo; cập nhật thời lượng Gold tự báo cáo; bản sửa QC từ CVAT và quyết định Release detection.
 
-Các commit này không tự chứng minh đã đạt yêu cầu >=4 commit theo từng Part trong quá trình học. Khi chốt bài, xem git log trên nhánh codex/submission-prep-20261119; chỉ push sau khi học viên đồng ý.
-
-Bổ sungcommitđóngcácthôngtinxácnhậnmới:CAL-02B,quyếtđịnhReworkvàGoldkhôngđo. Đâyvẫnlàcommitcục bộchuẩnbị,khôngchứngminhđãcommittừngPartngaykhihọc.
+Lịch sử này không chứng minh từng commit đã được tạo ngay sau từng Part trong buổi học. Không có GitHub Release/tag nào được tạo tự động. Thư mục work, models, trọng số và exporttrùng không được commit.

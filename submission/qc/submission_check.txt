@@ -1,4 +1,4 @@
 
 0 lỗi, 0 cảnh báo. Sạch lỗi: có thể nộp.
 
-Exit code: 0
+Exit code:0

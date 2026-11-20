@@ -22,7 +22,7 @@
       "errors": []
     }
   },
-  "format_files_checked": 37,
+  "format_files_checked": 48,
   "release": {
     "images": 24,
     "annotations": 584,
@@ -67,5 +67,10 @@
     "user_confirmed_changed_image": true,
     "unchanged_images_carried_forward": 4,
     "independent": false
+  },
+  "folder_audit": "submission/qc/folder_audit_20261120.json",
+  "latest_regression_tests": {
+    "run": 12,
+    "passed": 12
   }
 }

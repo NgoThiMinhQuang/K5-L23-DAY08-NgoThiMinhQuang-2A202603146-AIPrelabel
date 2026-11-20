@@ -3,71 +3,71 @@
   "parts": [
     {
       "part": 0,
-      "status": "Có bằng chứng kỹ thuật môi trường đạt ở lần kiểm trước; còn thông tin nộp bài/Git",
-      "evidence": "work/backups/technical_20261119_101526/check_env.txt exit 0; README đã có MSHV; STUDENT còn lớp/CVAT/commit."
+      "status": "Môi trường sẵn sàng; L2/CVAT2.74.1 đã có thông tin",
+      "evidence": "check_env exit0; CVAT HTTP200; README/STUDENT đã điền. Kiểm quy ước tên repo trước nộp."
     },
     {
       "part": 1,
       "status": "Gold hợp lệ, thời lượng tự báo cáo15phút",
-      "evidence": "4ảnh/51annotation; time_log15phút được bổ sung sau khi làm, không cólogbấmgiờ."
+      "evidence": "4ảnh/51annotation;15phút do học viên cung cấp sau khi hoàn thành, không có log bấm giờ."
     },
     {
       "part": 2,
-      "status": "Đủ đầu ra kỹ thuật, chưa điền hết phần nhận xét/recipe báo cáo",
-      "evidence": "6 dòng model_log; 6 thư mục đầu ra; gồm YOLO26, YOLOE và SAM r04."
+      "status": "Đủ6log và đầu ra, báo cáo đã có recipe/nhận xét",
+      "evidence": "model_log khớp evidence/model_runs_original.csv và runs/r01–r06.json; gồm YOLO26/YOLOE/SAM2.1."
     },
     {
       "part": 3,
-      "status": "Đủ sản phẩm quét ngưỡng; còn xác nhận giải thích trong REPORT",
-      "evidence": "threshold_sweep.csv/md/png tồn tại; motorbike=0.1, three_wheeler=0.15, các lớp khác 0.3; không chạy lại."
+      "status": "Đủ sản phẩm quét ngưỡng và giới hạn mẫu trong báo cáo",
+      "evidence": "threshold_sweep.csv/md/png; motorbike0.1,three_wheeler0.15; các lớp khác0.3."
     },
     {
       "part": 4,
-      "status": "Đã có sản phẩm và xác nhận review; giữ phân biệt hai vòng",
-      "evidence": "24 ảnh/586 annotation; batch_review=120 phút; độc lập vòng1 9/12, có hỗ trợ vòng2 12/12."
+      "status": "Đủ dữ liệu review và lịch sử các vòng",
+      "evidence": "24ảnh/586annotation trướcQC;120phút;12/12bẫy ở vòng sửa có hỗ trợ. Log vòng đầu giữ riêng."
     },
     {
       "part": 5,
-      "status": "Đủ ba ảnh từ điểm học viên, học viên xác nhận hoàn thành; phần nhận xét mask trong REPORT còn trống",
-      "evidence": "img013 4 điểm, img003 6 điểm, img017 4 điểm; SAM2.1 CPU, exit0; không chạy lại."
+      "status": "Đủ3mask từ điểm học viên và phần phân tích trong REPORT",
+      "evidence": "img013/img003/img017; số điểm4/6/4; không có segmentationGold; Release chỉ áp dụng detection."
     },
     {
       "part": 6,
-      "status": "Chuẩn bị xong, chưa hoàn thành",
-      "evidence": "Release candidate 24 ảnh/586 annotation nhất quán; 5 ảnh QC/110 vật, 0/5 đã kiểm; 3 ca calibration chờ quyết định."
+      "status": "Đủ3calibration, QC sau sửa và Release detection đã xác nhận",
+      "evidence": "24ảnh/584annotation;QC5ảnh/108đối tượng,0lỗi; xác nhận mới img003 và kế thừa4ảnh không đổi."
     }
   ],
   "release": {
     "images": 24,
     "annotations": 584,
     "per_class": {
-      "person": 282,
-      "three_wheeler": 24,
+      "person": 281,
       "bicycle": 9,
       "motorbike": 209,
+      "three_wheeler": 23,
       "car": 53,
       "truck": 5,
       "bus": 3,
       "ignore_region": 1
     },
-    "matches_batch_geometry_classes": true,
     "manifest_consistent": true,
     "summary_consistent": true,
     "validation_exit": 0,
-    "is_release_candidate_only": true,
+    "is_release_candidate_only": false,
     "taxonomy_version": "v1.1",
     "approved_final": true,
     "scope": "detection only",
     "images_replaced_by_qc_fix": [
       "img_003.jpg"
-    ]
+    ],
+    "matches_effective_batch_plus_qc_fixed": true
   },
   "qc": {
     "images": 5,
     "objects": 108,
     "unchecked": [],
     "human_checked": 5,
-    "error_rate": null,
+    "error_rate": 0.0,
     "final_decision": "Release detection",
     "confirmed_errors": 0,
     "error_rate_objects": 0,
@@ -155,7 +155,32 @@
       "segmentation_nonempty": 0
     }
   ],
-  "protected_inputs_sha256": {
+  "not_rerun": [
+    "Part2 models",
+    "Part3 threshold sweep",
+    "Part4 review statistics",
+    "Part5 SAM inference"
+  ],
+  "blocked_on": [],
+  "latest_audit": "submission/FINAL_AUDIT.md",
+  "latest_decision": "Release detection",
+  "gold_duration_status": "User-reported after completion; no contemporaneous timing log",
+  "pending": [
+    "Review repository naming convention before LMS submission"
+  ],
+  "formal_submission_requirement_missing": [],
+  "gold_manual_minutes": 15,
+  "rubric_timing_evidence_limitation": "Duration was supplied after completion, not supported by a stopwatch log",
+  "qc_current": {
+    "sample_images": 5,
+    "sample_objects": 108,
+    "error_objects": 0,
+    "error_images": 0,
+    "user_confirmed_changed_image": true,
+    "unchanged_images_carried_forward": 4,
+    "independent": false
+  },
+  "historical_input_hashes_at_initial_part6_snapshot": {
     "data/ATTRIBUTION.csv": "fa4cef280bc1d9dfbd058ed3947222da59f418f0bb38b211ccc060d54b924d2c",
     "data/fetch_candidates.py": "30f6ea80193d89417dbd5d6f8509f3932c15cd6c7cf9ff6874c2b73c4a2e3a6c",
     "data/README.md": "e1043e17729eaea0a9213d9c3d143707f86a273c9a46cb607149d5abcc800bda",
@@ -228,30 +253,13 @@
     "submission/qc/review_stats.json": "86880ac8936838eb5d32060917080153db131c1ac57a9ee8e27a2b04ae4db521",
     "submission/qc/review_stats.md": "e04d402e2eb0ea9ba6ce0a6628102fa1029d45c7ffce89848374604e62efc24f"
   },
-  "not_rerun": [
-    "Part2 models",
-    "Part3 threshold sweep",
-    "Part4 review statistics",
-    "Part5 SAM inference"
-  ],
-  "blocked_on": [],
-  "protected_inputs_unchanged": true,
-  "latest_audit": "submission/FINAL_AUDIT.md",
-  "latest_decision": "Release detection",
-  "gold_duration_status": "User-reported after completion; no contemporaneous timing log",
-  "pending": [
-    "Review repository naming convention before LMS submission"
-  ],
-  "formal_submission_requirement_missing": [],
-  "gold_manual_minutes": 15,
-  "rubric_timing_evidence_limitation": "Duration was supplied after completion, not supported by a stopwatch log",
-  "qc_current": {
-    "sample_images": 5,
-    "sample_objects": 108,
-    "error_objects": 0,
-    "error_images": 0,
-    "user_confirmed_changed_image": true,
-    "unchanged_images_carried_forward": 4,
-    "independent": false
-  }
+  "historical_inputs_unchanged_at_initial_snapshot": true,
+  "verified_original_source_hashes_current": {
+    "submission/labels/gold_manual.json": "aef1399a186e9728f6c09ad58d6a42c5c74450811de7696020cf6d568de0fbc1",
+    "submission/labels/batch_reviewed.json": "ca933576019485a69c5f1b35866242ddddc63e29e631acfd4052f2b904c650f4",
+    "submission/prelabel/pre_traps.coco.json": "8298aeaf5c0518559d49f9a814066653cf68a83248f1b0a75fad76f6963e94ad",
+    "submission/prelabel/traps_key.json": "a7b52189ee89dfa7db660bae8684cc32e24d130807e7e02813eb973fd9f12035",
+    "data/split.csv": "ce3de07331d3cb5854639ce45f7faea3f27b8ac0e26a0c81c05a094efb17bb9f"
+  },
+  "current_audit": "submission/qc/folder_audit_20261120.json"
 }

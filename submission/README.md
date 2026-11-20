@@ -13,3 +13,8 @@ Xem cấu trúc bắt buộc ở [../SUBMISSION.md](../SUBMISSION.md). Các file
 | `masks/*.jpg` | ảnh mask từ `sam2_points.py --out submission/masks --name ...` (≥ 3) | |
 
 Các file còn lại do **script** sinh ra: **không sửa tay**.
+
+<!-- CURRENT_SUBMISSION_STATUS -->
+## Trạng thái hiện tại
+
+Các khuôn trong bảng phía trên đã được điền. Bộ detection được chốt gồm24ảnh/584annotation, taxonomyv1.1. QC sau sửa:0/5ảnhlỗi,0/108đốitượnglỗi. Có3quyếtđịnhcalibration và3mask từđiểmhọcviên. Xem[REPORT.md](REPORT.md),[FINAL_AUDIT.md](FINAL_AUDIT.md)và[manifest](release/release_manifest.json). Cácsốvídụ trong bảng hướngdẫn không phải số liệu bài nộp.
